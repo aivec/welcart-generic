@@ -49,7 +49,7 @@ final class WelcartUtils {
             return $flag;
         }
 
-        if (!($usces instanceof usc_e_shop)) {
+        if (!($usces instanceof \usc_e_shop)) {
             return $flag;
         }
 
@@ -92,7 +92,7 @@ final class WelcartUtils {
             return $flag;
         }
 
-        if (!($usces instanceof usc_e_shop)) {
+        if (!($usces instanceof \usc_e_shop)) {
             return $flag;
         }
 
@@ -124,7 +124,7 @@ final class WelcartUtils {
             return $flag;
         }
 
-        if (!($usces instanceof usc_e_shop)) {
+        if (!($usces instanceof \usc_e_shop)) {
             return $flag;
         }
 
@@ -156,7 +156,7 @@ final class WelcartUtils {
             return $flag;
         }
 
-        if (!($usces instanceof usc_e_shop)) {
+        if (!($usces instanceof \usc_e_shop)) {
             return $flag;
         }
 
