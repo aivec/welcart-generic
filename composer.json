@@ -1,0 +1,16 @@
+{
+    "name": "aivec/welcart-generic",
+    "description": "Generic interfaces/abstract-classes/utils for Welcart libraries (settlement modules, customizations, etc.)",
+    "type": "library",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "Evan Shaw",
+            "email": "evandanielshaw@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"Aivec\\Welcart\\Generic\\": ""}
+    }
+}
