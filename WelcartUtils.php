@@ -172,4 +172,38 @@ final class WelcartUtils {
 
         return $flag;
     }
+
+    /**
+     * Variables to inject into our script
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @inheritDoc
+     * @global \usc_e_shop $usces
+     * @return array
+     */
+    public static function makeJSvars() {
+        global $usces;
+
+        $cart = $usces->cart->get_cart();
+        $label = '';
+        if (!empty($cart)) {
+            if (count($cart) > 0) {
+                $label = $cart[0]['sku'];
+                if (count($cart) > 1) {
+                    for ($i = 1; $i < count($cart); $i++) {
+                        $label .= ', ' . $cart[$i]['sku'];
+                    }
+                }
+            }
+        }
+
+        $vars = array(
+            'usces_cart' => $cart,
+            'usces_entry' => isset($_SESSION['usces_entry']) ? $_SESSION['usces_entry'] : array(),
+            'usces_member' => isset($_SESSION['usces_member']) ? $_SESSION['usces_member'] : array(),
+            'label' => $label,
+        );
+
+        return $vars;
+    }
 }
