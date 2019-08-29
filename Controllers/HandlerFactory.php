@@ -11,14 +11,14 @@ class HandlerFactory extends Controller {
      *
      * @var string
      */
-    private $ajax_namespace;
+    private $ajax_nspace;
 
     /**
      * POST request POST key that acts as a namespace for request handling
      *
      * @var string
      */
-    private $post_namespace;
+    private $post_nspace;
 
     /**
      * WordPress nonce key for POST/AJAX requests
@@ -37,19 +37,19 @@ class HandlerFactory extends Controller {
     /**
      * Defines namespaces for requests. Defines nonce data
      *
-     * @param string $ajax_namespace
-     * @param string $post_namespace
+     * @param string $ajax_nspace
+     * @param string $post_nspace
      * @param string $nonce_key
      * @param string $nonce_name
      */
     public function __construct(
-        $ajax_namespace,
-        $post_namespace,
+        $ajax_nspace,
+        $post_nspace,
         $nonce_key,
         $nonce_name
     ) {
-        $this->ajax_namespace = $ajax_namespace;
-        $this->post_namespace = $post_namespace;
+        $this->ajax_nspace = $ajax_nspace;
+        $this->post_nspace = $post_nspace;
         $this->nonce_key = $nonce_key;
         $this->nonce_name = $nonce_name;
     }
@@ -64,7 +64,7 @@ class HandlerFactory extends Controller {
      * @param array $middlewares array of middleware functions
      */
     public function add($route, $model, $method, $middlewares) {
-        if (isset($_POST[$this->ajax_namespace]) && !empty($_POST[$this->ajax_namespace])) {
+        if (isset($_POST[$this->ajax_nspace]) && !empty($_POST[$this->ajax_nspace])) {
             if (isset($_POST['route'])) {
                 if ($_POST['route'] === $route) {
                     check_ajax_referer($this->nonce_name, $this->nonce_key);
@@ -73,7 +73,7 @@ class HandlerFactory extends Controller {
             }
         }
 
-        if (isset($_POST[$this->post_namespace]) && !empty($_POST[$this->post_namespace])) {
+        if (isset($_POST[$this->post_nspace]) && !empty($_POST[$this->post_nspace])) {
             if (isset($_POST['route'])) {
                 if ($_POST['route'] === $route) {
                     $nonce = '';
