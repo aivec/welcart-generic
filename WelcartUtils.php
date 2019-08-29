@@ -202,6 +202,7 @@ final class WelcartUtils {
             'usces_entry' => isset($_SESSION['usces_entry']) ? $_SESSION['usces_entry'] : array(),
             'usces_member' => isset($_SESSION['usces_member']) ? $_SESSION['usces_member'] : array(),
             'label' => $label,
+            'usces_endpoint' => USCES_CART_URL,
         );
 
         return $vars;
