@@ -11,14 +11,14 @@ class HandlerFactory extends Controller {
      *
      * @var string
      */
-    private $ajax_nspace;
+    private $ajax_namespace;
 
     /**
      * POST request POST key that acts as a namespace for request handling
      *
      * @var string
      */
-    private $post_nspace;
+    private $post_namespace;
 
     /**
      * WordPress nonce key for POST/AJAX requests
@@ -35,45 +35,58 @@ class HandlerFactory extends Controller {
     private $nonce_name;
 
     /**
+     * WordPress nonce token
+     *
+     * @var string
+     */
+    private $nonce;
+
+    /**
      * Defines namespaces for requests. Defines nonce data
      *
-     * @param string $ajax_nspace
-     * @param string $post_nspace
+     * @param string $ajax_namespace
+     * @param string $post_namespace
      * @param string $nonce_key
      * @param string $nonce_name
+     * @param string $nonce
      */
     public function __construct(
-        $ajax_nspace,
-        $post_nspace,
+        $ajax_namespace,
+        $post_namespace,
         $nonce_key,
-        $nonce_name
+        $nonce_name,
+        $nonce
     ) {
-        $this->ajax_nspace = $ajax_nspace;
-        $this->post_nspace = $post_nspace;
+        $this->ajax_namespace = $ajax_namespace;
+        $this->post_namespace = $post_namespace;
         $this->nonce_key = $nonce_key;
         $this->nonce_name = $nonce_name;
+        $this->nonce = $nonce;
     }
 
     /**
      * Delegates requests to the appropriate class handler method
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
-     * @param string $route
-     * @param mixed  $model
-     * @param string $method
-     * @param array $middlewares array of middleware functions
+     * @param string     $route
+     * @param mixed      $model
+     * @param string     $method
+     * @param function[] $middlewares array of middleware functions
      */
     public function add($route, $model, $method, $middlewares) {
-        if (isset($_POST[$this->ajax_nspace]) && !empty($_POST[$this->ajax_nspace])) {
+        if (isset($_POST[$this->ajax_namespace]) && !empty($_POST[$this->ajax_namespace])) {
             if (isset($_POST['route'])) {
                 if ($_POST['route'] === $route) {
                     check_ajax_referer($this->nonce_name, $this->nonce_key);
-                    $middlewares($this->processRequest($model, $method, 'ajax'));
+                    foreach ($middlewares as $middleware) {
+                        $middleware();
+                    }
+                    $this->processRequest($model, $method, 'ajax');
                 }
             }
         }
 
-        if (isset($_POST[$this->post_nspace]) && !empty($_POST[$this->post_nspace])) {
+        if (isset($_POST[$this->post_namespace]) && !empty($_POST[$this->post_namespace])) {
             if (isset($_POST['route'])) {
                 if ($_POST['route'] === $route) {
                     $nonce = '';
@@ -82,6 +95,9 @@ class HandlerFactory extends Controller {
                     }
                     if (!wp_verify_nonce($nonce, $this->nonce_name)) {
                         die('Security check');
+                    }
+                    foreach ($middlewares as $middleware) {
+                        $middleware();
                     }
                     $this->processRequest($model, $method, 'post');
                 }
