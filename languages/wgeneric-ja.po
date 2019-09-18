@@ -14,4 +14,4 @@ msgstr ""
 "Language: ja\n"
 
 msgid "%s depends on Welcart but it is deactivated. Please activate Welcart."
-msgstr "%s depends on Welcart but it is deactivated. Please activate Welcart."
+msgstr "%sを利用するには <strong>Welcart e-Commerce（ウェルカート）</strong> が必要です。<a href=\"plugins.php\">Welcart e-Commerce を有効化</a>してください。"
