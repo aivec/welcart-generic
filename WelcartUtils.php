@@ -174,14 +174,14 @@ final class WelcartUtils {
     }
 
     /**
-     * Variables to inject into our script
+     * Creates product name from cart. Concatenates names and delimits with common
+     * in case of multiple items.
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
-     * @inheritDoc
      * @global \usc_e_shop $usces
-     * @return array
+     * @return string
      */
-    public static function makeJSvars() {
+    public static function getProductName() {
         global $usces;
 
         $cart = $usces->cart->get_cart();
@@ -197,11 +197,25 @@ final class WelcartUtils {
             }
         }
 
+        return $label;
+    }
+
+    /**
+     * Variables to inject into our script
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @inheritDoc
+     * @global \usc_e_shop $usces
+     * @return array
+     */
+    public static function makeJSvars() {
+        global $usces;
+
         $vars = array(
-            'usces_cart' => $cart,
+            'usces_cart' => $usces->cart->get_cart(),
             'usces_entry' => isset($_SESSION['usces_entry']) ? $_SESSION['usces_entry'] : array(),
             'usces_member' => isset($_SESSION['usces_member']) ? $_SESSION['usces_member'] : array(),
-            'label' => $label,
+            'label' => self::getProductName(),
             'usces_endpoint' => USCES_CART_URL,
         );
 
