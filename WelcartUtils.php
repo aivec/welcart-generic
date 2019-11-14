@@ -174,6 +174,29 @@ final class WelcartUtils {
     }
 
     /**
+     * Returns true if on member registration page
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @global usc_e_shop $usces
+     * @return boolean
+     */
+    public static function isNewMemberPage() {
+        global $usces;
+
+        $url = '';
+        if (isset($_SERVER['REQUEST_URI'])) {
+            $url = esc_url_raw(wp_unslash($_SERVER['REQUEST_URI']));
+        }
+        if ($usces->is_member_page($url)) {
+            if ($usces->page === 'newmemberform') {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Creates product name from cart. Concatenates names and delimits with common
      * in case of multiple items.
      *
