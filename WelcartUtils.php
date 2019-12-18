@@ -224,6 +224,21 @@ final class WelcartUtils {
     }
 
     /**
+     * Returns array of Welcart URLs
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @return array
+     */
+    public static function getUscesEndpoints() {
+        return [
+            'usces_endpoint' => USCES_CART_URL,
+            'uscesCartEndpoint' => USCES_CART_URL,
+            'uscesMemberEndpoint' => USCES_MEMBER_URL,
+            'uscesNewMemberEndpoint' => USCES_NEWMEMBER_URL,
+        ];
+    }
+
+    /**
      * Variables to inject into our script
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
@@ -234,13 +249,13 @@ final class WelcartUtils {
     public static function makeJSvars() {
         global $usces;
 
-        $vars = array(
+        $vars = [
             'usces_cart' => $usces->cart->get_cart(),
             'usces_entry' => isset($_SESSION['usces_entry']) ? $_SESSION['usces_entry'] : array(),
             'usces_member' => isset($_SESSION['usces_member']) ? $_SESSION['usces_member'] : array(),
             'label' => self::getProductName(),
-            'usces_endpoint' => USCES_CART_URL,
-        );
+        ];
+        $vars = array_merge($vars, self::getUscesEndpoints());
 
         return $vars;
     }
