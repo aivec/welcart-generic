@@ -1,6 +1,6 @@
 {
   "name": "welcart-generic",
-  "version": "3.0.1",
+  "version": "3.1.1",
   "description": "Generic interfaces/abstract-classes/utils for Welcart libraries (settlement modules, customizations, etc.)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
