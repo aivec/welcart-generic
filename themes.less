@@ -1,0 +1,381 @@
+@VERSION: v3_0_0;
+@btnnamespace: welbtn;
+
+@basic: basic;
+@nova: nova;
+@beldad: beldad;
+@bordeaux: bordeaux;
+@carina: carina;
+@square: square;
+@voll: voll;
+@panetteria: panetteria;
+
+@basic-btn-primary: #ff8c00;
+@basic-btn-secondary: #efefef;
+@basic-btn-primary-text: #fff;
+@basic-btn-secondary-text: #000;
+@basic-btn-primary-hover: #ffa500;
+@basic-btn-secondary-hover: #ddd;
+
+@nova-btn-primary: #d3222a;
+@nova-btn-secondary: #c2c3c3;
+@nova-btn-primary-text: #fff;
+@nova-btn-secondary-text: #fff;
+@nova-btn-primary-hover: #e25157;
+@nova-btn-secondary-hover: #d6d6d6;
+
+@beldad-btn-primary: #000;
+@beldad-btn-secondary: rgba(221, 221, 221, 0.6);
+@beldad-btn-primary-text: #fff;
+@beldad-btn-secondary-text: #333;
+@beldad-btn-primary-hover: rgba(0, 0, 0, 0.6);
+@beldad-btn-secondary-hover: #ddd;
+
+@bordeaux-btn-primary: #a61536;
+@bordeaux-btn-secondary: #eee;
+@bordeaux-btn-primary-text: #fff;
+@bordeaux-btn-secondary-text: #000;
+@bordeaux-btn-primary-hover: #8e122e;
+@bordeaux-btn-secondary-hover: #ddd;
+
+@carina-btn-primary: #d3222a;
+@carina-btn-secondary: #eee;
+@carina-btn-primary-text: #fff;
+@carina-btn-secondary-text: #000;
+@carina-btn-primary-hover: rgba(211, 34, 42, 0.6);
+@carina-btn-secondary-hover: #ddd;
+
+@square-btn-primary: rgba(211, 34, 42, 1);
+@square-btn-secondary: rgba(239, 239, 239, 1);
+@square-btn-primary-text: #fff;
+@square-btn-secondary-text: #333;
+@square-btn-primary-hover: rgba(211, 34, 42, 0.6);
+@square-btn-secondary-hover: rgba(239, 239, 239, 0.6);
+
+@voll-btn-primary: #2abfab;
+@voll-btn-secondary: #ddd;
+@voll-btn-primary-text: #fff;
+@voll-btn-secondary-text: #333;
+@voll-btn-primary-hover: rgba(42, 191, 171, 0.6);
+@voll-btn-secondary-hover: rgba(221, 221, 221, 0.6);
+
+@panetteria-btn-primary: #ff8c00;
+@panetteria-btn-secondary: #fff;
+@panetteria-btn-primary-text: #fff;
+@panetteria-btn-secondary-text: #fff;
+@panetteria-btn-primary-hover: #ffa500;
+@panetteria-btn-secondary-hover: black;
+
+@btn-primary: ~"@{btnnamespace}-@{VERSION}-primary";
+@btn-secondary: ~"@{btnnamespace}-@{VERSION}-secondary";
+
+// primary buttons
+.ui.buttons button.ui.button.@{btn-primary}-@{basic},
+button.ui.button.@{btn-primary}-@{basic},
+button.@{btn-primary}-@{basic},
+input[type="button"].@{btn-primary}-@{basic},
+input[type="submit"].@{btn-primary}-@{basic},
+input[type="reset"].@{btn-primary}-@{basic},
+a.@{btn-primary}-@{basic} {
+  background-color: @basic-btn-primary;
+  color: @basic-btn-primary-text;
+  &:hover {
+    background-color: @basic-btn-primary-hover;
+    color: @basic-btn-primary-text;
+  }
+}
+.ui.basic.buttons button.ui.button.@{btn-primary}-@{basic},
+.ui.buttons button.ui.basic.button.@{btn-primary}-@{basic},
+button.ui.basic.button.@{btn-primary}-@{basic} {
+  background: 0 0;
+  -webkit-box-shadow: 0 0 0 1px @basic-btn-primary inset;
+  box-shadow: 0 0 0 1px @basic-btn-primary inset;
+  color: @basic-btn-primary;
+}
+
+.ui.buttons button.ui.button.@{btn-primary}-@{nova},
+button.ui.button.@{btn-primary}-@{nova},
+button.@{btn-primary}-@{nova},
+input[type="button"].@{btn-primary}-@{nova},
+input[type="submit"].@{btn-primary}-@{nova},
+input[type="reset"].@{btn-primary}-@{nova},
+a.@{btn-primary}-@{nova},
+.batch-select-container input[type="submit"].@{btn-primary}-@{nova} {
+  background-color: @nova-btn-primary;
+  color: @nova-btn-primary-text;
+  -webkit-box-shadow: 0 3px #a5141a;
+  box-shadow: 0 3px #a5141a;
+  &:hover {
+    background-color: @nova-btn-primary-hover;
+    color: @nova-btn-primary-text;
+    -webkit-box-shadow: 0 2px #d3222a;
+    box-shadow: 0 2px #d3222a;
+  }
+}
+.ui.basic.buttons button.ui.button.@{btn-primary}-@{nova},
+.ui.buttons button.ui.basic.button.@{btn-primary}-@{nova},
+button.ui.basic.button.@{btn-primary}-@{nova} {
+  background: 0 0;
+  -webkit-box-shadow: 0 0 0 1px @nova-btn-primary inset;
+  box-shadow: 0 0 0 1px @nova-btn-primary inset;
+  color: @nova-btn-primary;
+}
+
+.ui.buttons button.ui.button.@{btn-primary}-@{beldad},
+button.ui.button.@{btn-primary}-@{beldad},
+button.@{btn-primary}-@{beldad},
+input[type="button"].@{btn-primary}-@{beldad},
+input[type="submit"].@{btn-primary}-@{beldad},
+input[type="reset"].@{btn-primary}-@{beldad},
+a.@{btn-primary}-@{beldad} {
+  background-color: @beldad-btn-primary;
+  color: @beldad-btn-primary-text;
+  &:hover {
+    background-color: @beldad-btn-primary-hover;
+    color: @beldad-btn-primary-text;
+  }
+}
+.ui.basic.buttons button.ui.button.@{btn-primary}-@{beldad},
+.ui.buttons button.ui.basic.button.@{btn-primary}-@{beldad},
+button.ui.basic.button.@{btn-primary}-@{beldad} {
+  background: 0 0;
+  -webkit-box-shadow: 0 0 0 1px @beldad-btn-primary inset;
+  box-shadow: 0 0 0 1px @beldad-btn-primary inset;
+  color: @beldad-btn-primary;
+}
+
+.ui.buttons button.ui.button.@{btn-primary}-@{bordeaux},
+button.ui.button.@{btn-primary}-@{bordeaux},
+button.@{btn-primary}-@{bordeaux},
+input[type="button"].@{btn-primary}-@{bordeaux},
+input[type="submit"].@{btn-primary}-@{bordeaux},
+input[type="reset"].@{btn-primary}-@{bordeaux},
+a.@{btn-primary}-@{bordeaux} {
+  background-color: @bordeaux-btn-primary;
+  color: @bordeaux-btn-primary-text;
+  &:hover {
+    background-color: @bordeaux-btn-primary-hover;
+    color: @bordeaux-btn-primary-text;
+  }
+}
+.ui.basic.buttons button.ui.button.@{btn-primary}-@{bordeaux},
+.ui.buttons button.ui.basic.button.@{btn-primary}-@{bordeaux},
+button.ui.basic.button.@{btn-primary}-@{bordeaux} {
+  background: 0 0;
+  -webkit-box-shadow: 0 0 0 1px @bordeaux-btn-primary inset;
+  box-shadow: 0 0 0 1px @bordeaux-btn-primary inset;
+  color: @bordeaux-btn-primary;
+}
+
+.ui.buttons button.ui.button.@{btn-primary}-@{carina},
+button.ui.button.@{btn-primary}-@{carina},
+button.@{btn-primary}-@{carina},
+input[type="button"].@{btn-primary}-@{carina},
+input[type="submit"].@{btn-primary}-@{carina},
+input[type="reset"].@{btn-primary}-@{carina},
+a.@{btn-primary}-@{carina} {
+  background-color: @carina-btn-primary;
+  color: @carina-btn-primary-text;
+  &:hover {
+    background-color: @carina-btn-primary-hover;
+    color: @carina-btn-primary-text;
+  }
+}
+.ui.basic.buttons button.ui.button.@{btn-primary}-@{carina},
+.ui.buttons button.ui.basic.button.@{btn-primary}-@{carina},
+button.ui.basic.button.@{btn-primary}-@{carina} {
+  background: 0 0;
+  -webkit-box-shadow: 0 0 0 1px @carina-btn-primary inset;
+  box-shadow: 0 0 0 1px @carina-btn-primary inset;
+  color: @carina-btn-primary;
+}
+
+.ui.buttons button.ui.button.@{btn-primary}-@{square},
+button.ui.button.@{btn-primary}-@{square},
+button.@{btn-primary}-@{square},
+input[type="button"].@{btn-primary}-@{square},
+input[type="submit"].@{btn-primary}-@{square},
+input[type="reset"].@{btn-primary}-@{square},
+a.@{btn-primary}-@{square} {
+  background-color: @square-btn-primary;
+  color: @square-btn-primary-text;
+  &:hover {
+    background-color: @square-btn-primary-hover;
+    color: @square-btn-primary-text;
+  }
+}
+.ui.basic.buttons button.ui.button.@{btn-primary}-@{square},
+.ui.buttons button.ui.basic.button.@{btn-primary}-@{square},
+button.ui.basic.button.@{btn-primary}-@{square} {
+  background: 0 0;
+  -webkit-box-shadow: 0 0 0 1px @square-btn-primary inset;
+  box-shadow: 0 0 0 1px @square-btn-primary inset;
+  color: @square-btn-primary;
+}
+
+.ui.buttons button.ui.button.@{btn-primary}-@{voll},
+button.ui.button.@{btn-primary}-@{voll},
+button.@{btn-primary}-@{voll},
+input[type="button"].@{btn-primary}-@{voll},
+input[type="submit"].@{btn-primary}-@{voll},
+input[type="reset"].@{btn-primary}-@{voll},
+a.@{btn-primary}-@{voll} {
+  background-color: @voll-btn-primary;
+  color: @voll-btn-primary-text;
+  &:hover {
+    background-color: @voll-btn-primary-hover;
+    color: @voll-btn-primary-text;
+  }
+}
+.ui.basic.buttons button.ui.button.@{btn-primary}-@{voll},
+.ui.buttons button.ui.basic.button.@{btn-primary}-@{voll},
+button.ui.basic.button.@{btn-primary}-@{voll} {
+  background: 0 0;
+  -webkit-box-shadow: 0 0 0 1px @voll-btn-primary inset;
+  box-shadow: 0 0 0 1px @voll-btn-primary inset;
+  color: @voll-btn-primary;
+}
+
+.ui.buttons button.ui.button.@{btn-primary}-@{panetteria},
+button.ui.button.@{btn-primary}-@{panetteria},
+button.@{btn-primary}-@{panetteria},
+input[type="button"].@{btn-primary}-@{panetteria},
+input[type="submit"].@{btn-primary}-@{panetteria},
+input[type="reset"].@{btn-primary}-@{panetteria},
+a.@{btn-primary}-@{panetteria} {
+  background-color: @panetteria-btn-primary;
+  color: @panetteria-btn-primary-text;
+  &:hover {
+    background-color: @panetteria-btn-primary-hover;
+    color: @panetteria-btn-primary-text;
+  }
+}
+.ui.basic.buttons button.ui.button.@{btn-primary}-@{panetteria},
+.ui.buttons button.ui.basic.button.@{btn-primary}-@{panetteria},
+button.ui.basic.button.@{btn-primary}-@{panetteria} {
+  background: 0 0;
+  -webkit-box-shadow: 0 0 0 1px @panetteria-btn-primary inset;
+  box-shadow: 0 0 0 1px @panetteria-btn-primary inset;
+  color: @panetteria-btn-primary;
+}
+
+// secondary buttons
+.ui.buttons button.ui.button.@{btn-secondary}-@{basic},
+button.ui.button.@{btn-secondary}-@{basic},
+button.@{btn-secondary}-@{basic},
+input[type="button"].@{btn-secondary}-@{basic},
+input[type="submit"].@{btn-secondary}-@{basic},
+input[type="reset"].@{btn-secondary}-@{basic},
+a.@{btn-secondary}-@{basic} {
+  background-color: @basic-btn-secondary;
+  color: @basic-btn-secondary-text;
+  &:hover {
+    background-color: @basic-btn-secondary-hover;
+    color: @basic-btn-secondary-text;
+  }
+}
+
+.ui.buttons button.ui.button.@{btn-secondary}-@{nova},
+button.ui.button.@{btn-secondary}-@{nova},
+button.@{btn-secondary}-@{nova},
+input[type="button"].@{btn-secondary}-@{nova},
+input[type="submit"].@{btn-secondary}-@{nova},
+input[type="reset"].@{btn-secondary}-@{nova},
+a.@{btn-secondary}-@{nova} {
+  background-color: @nova-btn-secondary;
+  color: @nova-btn-secondary-text;
+  &:hover {
+    background-color: @nova-btn-secondary-hover;
+    color: @nova-btn-secondary-text;
+  }
+}
+
+.ui.buttons button.ui.button.@{btn-secondary}-@{beldad},
+button.ui.button.@{btn-secondary}-@{beldad},
+button.@{btn-secondary}-@{beldad},
+input[type="button"].@{btn-secondary}-@{beldad},
+input[type="submit"].@{btn-secondary}-@{beldad},
+input[type="reset"].@{btn-secondary}-@{beldad},
+a.@{btn-secondary}-@{beldad} {
+  background-color: @beldad-btn-secondary;
+  color: @beldad-btn-secondary-text;
+  &:hover {
+    background-color: @beldad-btn-secondary-hover;
+    color: @beldad-btn-secondary-text;
+  }
+}
+
+.ui.buttons button.ui.button.@{btn-secondary}-@{bordeaux},
+button.ui.button.@{btn-secondary}-@{bordeaux},
+button.@{btn-secondary}-@{bordeaux},
+input[type="button"].@{btn-secondary}-@{bordeaux},
+input[type="submit"].@{btn-secondary}-@{bordeaux},
+input[type="reset"].@{btn-secondary}-@{bordeaux},
+a.@{btn-secondary}-@{bordeaux} {
+  background-color: @bordeaux-btn-secondary;
+  color: @bordeaux-btn-secondary-text;
+  &:hover {
+    background-color: @bordeaux-btn-secondary-hover;
+    color: @bordeaux-btn-secondary-text;
+  }
+}
+
+.ui.buttons button.ui.button.@{btn-secondary}-@{carina},
+button.ui.button.@{btn-secondary}-@{carina},
+button.@{btn-secondary}-@{carina},
+input[type="button"].@{btn-secondary}-@{carina},
+input[type="submit"].@{btn-secondary}-@{carina},
+input[type="reset"].@{btn-secondary}-@{carina},
+a.@{btn-secondary}-@{carina} {
+  background-color: @carina-btn-secondary;
+  color: @carina-btn-secondary-text;
+  &:hover {
+    background-color: @carina-btn-secondary-hover;
+    color: @carina-btn-secondary-text;
+  }
+}
+
+.ui.buttons button.ui.button.@{btn-secondary}-@{square},
+button.ui.button.@{btn-secondary}-@{square},
+button.@{btn-secondary}-@{square},
+input[type="button"].@{btn-secondary}-@{square},
+input[type="submit"].@{btn-secondary}-@{square},
+input[type="reset"].@{btn-secondary}-@{square},
+a.@{btn-secondary}-@{square} {
+  background-color: @square-btn-secondary;
+  color: @square-btn-secondary-text;
+  &:hover {
+    background-color: @square-btn-secondary-hover;
+    color: @square-btn-secondary-text;
+  }
+}
+
+.ui.buttons button.ui.button.@{btn-secondary}-@{voll},
+button.ui.button.@{btn-secondary}-@{voll},
+button.@{btn-secondary}-@{voll},
+input[type="button"].@{btn-secondary}-@{voll},
+input[type="submit"].@{btn-secondary}-@{voll},
+input[type="reset"].@{btn-secondary}-@{voll},
+a.@{btn-secondary}-@{voll} {
+  background-color: @voll-btn-secondary;
+  color: @voll-btn-secondary-text;
+  &:hover {
+    background-color: @voll-btn-secondary-hover;
+    color: @voll-btn-secondary-text;
+  }
+}
+
+.ui.buttons button.ui.button.@{btn-secondary}-@{panetteria},
+button.ui.button.@{btn-secondary}-@{panetteria},
+button.@{btn-secondary}-@{panetteria},
+input[type="button"].@{btn-secondary}-@{panetteria},
+input[type="submit"].@{btn-secondary}-@{panetteria},
+input[type="reset"].@{btn-secondary}-@{panetteria},
+a.@{btn-secondary}-@{panetteria} {
+  background-color: @panetteria-btn-secondary;
+  color: @panetteria-btn-secondary-text;
+  &:hover {
+    background-color: @panetteria-btn-secondary-hover;
+    color: @panetteria-btn-secondary-text;
+  }
+}
