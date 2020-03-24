@@ -1,426 +1,426 @@
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-basic,
-button.ui.button.welbtn-v3_1_1-primary-basic,
-button.welbtn-v3_1_1-primary-basic,
-input[type="button"].welbtn-v3_1_1-primary-basic,
-input[type="submit"].welbtn-v3_1_1-primary-basic,
-input[type="reset"].welbtn-v3_1_1-primary-basic,
-a.welbtn-v3_1_1-primary-basic {
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-basic,
+button.ui.button.welbtn-v3_1_2-primary-basic,
+button.welbtn-v3_1_2-primary-basic,
+input[type="button"].welbtn-v3_1_2-primary-basic,
+input[type="submit"].welbtn-v3_1_2-primary-basic,
+input[type="reset"].welbtn-v3_1_2-primary-basic,
+a.welbtn-v3_1_2-primary-basic {
   background-color: #ff8c00;
   background: #ff8c00;
   color: #fff;
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-basic:hover,
-button.ui.button.welbtn-v3_1_1-primary-basic:hover,
-button.welbtn-v3_1_1-primary-basic:hover,
-input[type="button"].welbtn-v3_1_1-primary-basic:hover,
-input[type="submit"].welbtn-v3_1_1-primary-basic:hover,
-input[type="reset"].welbtn-v3_1_1-primary-basic:hover,
-a.welbtn-v3_1_1-primary-basic:hover {
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-basic:hover,
+button.ui.button.welbtn-v3_1_2-primary-basic:hover,
+button.welbtn-v3_1_2-primary-basic:hover,
+input[type="button"].welbtn-v3_1_2-primary-basic:hover,
+input[type="submit"].welbtn-v3_1_2-primary-basic:hover,
+input[type="reset"].welbtn-v3_1_2-primary-basic:hover,
+a.welbtn-v3_1_2-primary-basic:hover {
   background-color: #ffa500;
   color: #fff;
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
-.ui.basic.buttons button.ui.button.welbtn-v3_1_1-primary-basic,
-.ui.buttons button.ui.basic.button.welbtn-v3_1_1-primary-basic,
-button.ui.basic.button.welbtn-v3_1_1-primary-basic {
+.ui.basic.buttons button.ui.button.welbtn-v3_1_2-primary-basic,
+.ui.buttons button.ui.basic.button.welbtn-v3_1_2-primary-basic,
+button.ui.basic.button.welbtn-v3_1_2-primary-basic {
   background: 0 0;
   -webkit-box-shadow: 0 0 0 1px #ff8c00 inset;
   box-shadow: 0 0 0 1px #ff8c00 inset;
   color: #ff8c00;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-nova,
-button.ui.button.welbtn-v3_1_1-primary-nova,
-button.welbtn-v3_1_1-primary-nova,
-input[type="button"].welbtn-v3_1_1-primary-nova,
-input[type="submit"].welbtn-v3_1_1-primary-nova,
-input[type="reset"].welbtn-v3_1_1-primary-nova,
-a.welbtn-v3_1_1-primary-nova,
-.batch-select-container input[type="submit"].welbtn-v3_1_1-primary-nova {
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-nova,
+button.ui.button.welbtn-v3_1_2-primary-nova,
+button.welbtn-v3_1_2-primary-nova,
+input[type="button"].welbtn-v3_1_2-primary-nova,
+input[type="submit"].welbtn-v3_1_2-primary-nova,
+input[type="reset"].welbtn-v3_1_2-primary-nova,
+a.welbtn-v3_1_2-primary-nova,
+.batch-select-container input[type="submit"].welbtn-v3_1_2-primary-nova {
   background-color: #d3222a;
   background: #d3222a;
   color: #fff;
   -webkit-box-shadow: 0 3px #a5141a;
   box-shadow: 0 3px #a5141a;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-nova:hover,
-button.ui.button.welbtn-v3_1_1-primary-nova:hover,
-button.welbtn-v3_1_1-primary-nova:hover,
-input[type="button"].welbtn-v3_1_1-primary-nova:hover,
-input[type="submit"].welbtn-v3_1_1-primary-nova:hover,
-input[type="reset"].welbtn-v3_1_1-primary-nova:hover,
-a.welbtn-v3_1_1-primary-nova:hover,
-.batch-select-container input[type="submit"].welbtn-v3_1_1-primary-nova:hover {
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-nova:hover,
+button.ui.button.welbtn-v3_1_2-primary-nova:hover,
+button.welbtn-v3_1_2-primary-nova:hover,
+input[type="button"].welbtn-v3_1_2-primary-nova:hover,
+input[type="submit"].welbtn-v3_1_2-primary-nova:hover,
+input[type="reset"].welbtn-v3_1_2-primary-nova:hover,
+a.welbtn-v3_1_2-primary-nova:hover,
+.batch-select-container input[type="submit"].welbtn-v3_1_2-primary-nova:hover {
   background-color: #e25157;
   color: #fff;
   -webkit-box-shadow: 0 2px #d3222a;
   box-shadow: 0 2px #d3222a;
 }
-.ui.basic.buttons button.ui.button.welbtn-v3_1_1-primary-nova,
-.ui.buttons button.ui.basic.button.welbtn-v3_1_1-primary-nova,
-button.ui.basic.button.welbtn-v3_1_1-primary-nova {
+.ui.basic.buttons button.ui.button.welbtn-v3_1_2-primary-nova,
+.ui.buttons button.ui.basic.button.welbtn-v3_1_2-primary-nova,
+button.ui.basic.button.welbtn-v3_1_2-primary-nova {
   background: 0 0;
   -webkit-box-shadow: 0 0 0 1px #d3222a inset;
   box-shadow: 0 0 0 1px #d3222a inset;
   color: #d3222a;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-beldad,
-button.ui.button.welbtn-v3_1_1-primary-beldad,
-button.welbtn-v3_1_1-primary-beldad,
-input[type="button"].welbtn-v3_1_1-primary-beldad,
-input[type="submit"].welbtn-v3_1_1-primary-beldad,
-input[type="reset"].welbtn-v3_1_1-primary-beldad,
-a.welbtn-v3_1_1-primary-beldad {
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-beldad,
+button.ui.button.welbtn-v3_1_2-primary-beldad,
+button.welbtn-v3_1_2-primary-beldad,
+input[type="button"].welbtn-v3_1_2-primary-beldad,
+input[type="submit"].welbtn-v3_1_2-primary-beldad,
+input[type="reset"].welbtn-v3_1_2-primary-beldad,
+a.welbtn-v3_1_2-primary-beldad {
   background-color: #000;
   background: #000;
   color: #fff;
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-beldad:hover,
-button.ui.button.welbtn-v3_1_1-primary-beldad:hover,
-button.welbtn-v3_1_1-primary-beldad:hover,
-input[type="button"].welbtn-v3_1_1-primary-beldad:hover,
-input[type="submit"].welbtn-v3_1_1-primary-beldad:hover,
-input[type="reset"].welbtn-v3_1_1-primary-beldad:hover,
-a.welbtn-v3_1_1-primary-beldad:hover {
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-beldad:hover,
+button.ui.button.welbtn-v3_1_2-primary-beldad:hover,
+button.welbtn-v3_1_2-primary-beldad:hover,
+input[type="button"].welbtn-v3_1_2-primary-beldad:hover,
+input[type="submit"].welbtn-v3_1_2-primary-beldad:hover,
+input[type="reset"].welbtn-v3_1_2-primary-beldad:hover,
+a.welbtn-v3_1_2-primary-beldad:hover {
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
-.ui.basic.buttons button.ui.button.welbtn-v3_1_1-primary-beldad,
-.ui.buttons button.ui.basic.button.welbtn-v3_1_1-primary-beldad,
-button.ui.basic.button.welbtn-v3_1_1-primary-beldad {
+.ui.basic.buttons button.ui.button.welbtn-v3_1_2-primary-beldad,
+.ui.buttons button.ui.basic.button.welbtn-v3_1_2-primary-beldad,
+button.ui.basic.button.welbtn-v3_1_2-primary-beldad {
   background: 0 0;
   -webkit-box-shadow: 0 0 0 1px #000 inset;
   box-shadow: 0 0 0 1px #000 inset;
   color: #000;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-bordeaux,
-button.ui.button.welbtn-v3_1_1-primary-bordeaux,
-button.welbtn-v3_1_1-primary-bordeaux,
-input[type="button"].welbtn-v3_1_1-primary-bordeaux,
-input[type="submit"].welbtn-v3_1_1-primary-bordeaux,
-input[type="reset"].welbtn-v3_1_1-primary-bordeaux,
-a.welbtn-v3_1_1-primary-bordeaux {
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-bordeaux,
+button.ui.button.welbtn-v3_1_2-primary-bordeaux,
+button.welbtn-v3_1_2-primary-bordeaux,
+input[type="button"].welbtn-v3_1_2-primary-bordeaux,
+input[type="submit"].welbtn-v3_1_2-primary-bordeaux,
+input[type="reset"].welbtn-v3_1_2-primary-bordeaux,
+a.welbtn-v3_1_2-primary-bordeaux {
   background-color: #a61536;
   background: #a61536;
   color: #fff;
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-bordeaux:hover,
-button.ui.button.welbtn-v3_1_1-primary-bordeaux:hover,
-button.welbtn-v3_1_1-primary-bordeaux:hover,
-input[type="button"].welbtn-v3_1_1-primary-bordeaux:hover,
-input[type="submit"].welbtn-v3_1_1-primary-bordeaux:hover,
-input[type="reset"].welbtn-v3_1_1-primary-bordeaux:hover,
-a.welbtn-v3_1_1-primary-bordeaux:hover {
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-bordeaux:hover,
+button.ui.button.welbtn-v3_1_2-primary-bordeaux:hover,
+button.welbtn-v3_1_2-primary-bordeaux:hover,
+input[type="button"].welbtn-v3_1_2-primary-bordeaux:hover,
+input[type="submit"].welbtn-v3_1_2-primary-bordeaux:hover,
+input[type="reset"].welbtn-v3_1_2-primary-bordeaux:hover,
+a.welbtn-v3_1_2-primary-bordeaux:hover {
   background-color: #8e122e;
   color: #fff;
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
-.ui.basic.buttons button.ui.button.welbtn-v3_1_1-primary-bordeaux,
-.ui.buttons button.ui.basic.button.welbtn-v3_1_1-primary-bordeaux,
-button.ui.basic.button.welbtn-v3_1_1-primary-bordeaux {
+.ui.basic.buttons button.ui.button.welbtn-v3_1_2-primary-bordeaux,
+.ui.buttons button.ui.basic.button.welbtn-v3_1_2-primary-bordeaux,
+button.ui.basic.button.welbtn-v3_1_2-primary-bordeaux {
   background: 0 0;
   -webkit-box-shadow: 0 0 0 1px #a61536 inset;
   box-shadow: 0 0 0 1px #a61536 inset;
   color: #a61536;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-carina,
-button.ui.button.welbtn-v3_1_1-primary-carina,
-button.welbtn-v3_1_1-primary-carina,
-input[type="button"].welbtn-v3_1_1-primary-carina,
-input[type="submit"].welbtn-v3_1_1-primary-carina,
-input[type="reset"].welbtn-v3_1_1-primary-carina,
-a.welbtn-v3_1_1-primary-carina {
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-carina,
+button.ui.button.welbtn-v3_1_2-primary-carina,
+button.welbtn-v3_1_2-primary-carina,
+input[type="button"].welbtn-v3_1_2-primary-carina,
+input[type="submit"].welbtn-v3_1_2-primary-carina,
+input[type="reset"].welbtn-v3_1_2-primary-carina,
+a.welbtn-v3_1_2-primary-carina {
   background-color: #d3222a;
   background: #d3222a;
   color: #fff;
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-carina:hover,
-button.ui.button.welbtn-v3_1_1-primary-carina:hover,
-button.welbtn-v3_1_1-primary-carina:hover,
-input[type="button"].welbtn-v3_1_1-primary-carina:hover,
-input[type="submit"].welbtn-v3_1_1-primary-carina:hover,
-input[type="reset"].welbtn-v3_1_1-primary-carina:hover,
-a.welbtn-v3_1_1-primary-carina:hover {
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-carina:hover,
+button.ui.button.welbtn-v3_1_2-primary-carina:hover,
+button.welbtn-v3_1_2-primary-carina:hover,
+input[type="button"].welbtn-v3_1_2-primary-carina:hover,
+input[type="submit"].welbtn-v3_1_2-primary-carina:hover,
+input[type="reset"].welbtn-v3_1_2-primary-carina:hover,
+a.welbtn-v3_1_2-primary-carina:hover {
   background-color: rgba(211, 34, 42, 0.6);
   color: #fff;
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
-.ui.basic.buttons button.ui.button.welbtn-v3_1_1-primary-carina,
-.ui.buttons button.ui.basic.button.welbtn-v3_1_1-primary-carina,
-button.ui.basic.button.welbtn-v3_1_1-primary-carina {
+.ui.basic.buttons button.ui.button.welbtn-v3_1_2-primary-carina,
+.ui.buttons button.ui.basic.button.welbtn-v3_1_2-primary-carina,
+button.ui.basic.button.welbtn-v3_1_2-primary-carina {
   background: 0 0;
   -webkit-box-shadow: 0 0 0 1px #d3222a inset;
   box-shadow: 0 0 0 1px #d3222a inset;
   color: #d3222a;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-square,
-button.ui.button.welbtn-v3_1_1-primary-square,
-button.welbtn-v3_1_1-primary-square,
-input[type="button"].welbtn-v3_1_1-primary-square,
-input[type="submit"].welbtn-v3_1_1-primary-square,
-input[type="reset"].welbtn-v3_1_1-primary-square,
-a.welbtn-v3_1_1-primary-square {
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-square,
+button.ui.button.welbtn-v3_1_2-primary-square,
+button.welbtn-v3_1_2-primary-square,
+input[type="button"].welbtn-v3_1_2-primary-square,
+input[type="submit"].welbtn-v3_1_2-primary-square,
+input[type="reset"].welbtn-v3_1_2-primary-square,
+a.welbtn-v3_1_2-primary-square {
   background-color: #d3222a;
   background: #d3222a;
   color: #fff;
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-square:hover,
-button.ui.button.welbtn-v3_1_1-primary-square:hover,
-button.welbtn-v3_1_1-primary-square:hover,
-input[type="button"].welbtn-v3_1_1-primary-square:hover,
-input[type="submit"].welbtn-v3_1_1-primary-square:hover,
-input[type="reset"].welbtn-v3_1_1-primary-square:hover,
-a.welbtn-v3_1_1-primary-square:hover {
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-square:hover,
+button.ui.button.welbtn-v3_1_2-primary-square:hover,
+button.welbtn-v3_1_2-primary-square:hover,
+input[type="button"].welbtn-v3_1_2-primary-square:hover,
+input[type="submit"].welbtn-v3_1_2-primary-square:hover,
+input[type="reset"].welbtn-v3_1_2-primary-square:hover,
+a.welbtn-v3_1_2-primary-square:hover {
   background-color: rgba(211, 34, 42, 0.6);
   color: #fff;
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
-.ui.basic.buttons button.ui.button.welbtn-v3_1_1-primary-square,
-.ui.buttons button.ui.basic.button.welbtn-v3_1_1-primary-square,
-button.ui.basic.button.welbtn-v3_1_1-primary-square {
+.ui.basic.buttons button.ui.button.welbtn-v3_1_2-primary-square,
+.ui.buttons button.ui.basic.button.welbtn-v3_1_2-primary-square,
+button.ui.basic.button.welbtn-v3_1_2-primary-square {
   background: 0 0;
   -webkit-box-shadow: 0 0 0 1px #d3222a inset;
   box-shadow: 0 0 0 1px #d3222a inset;
   color: #d3222a;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-voll,
-button.ui.button.welbtn-v3_1_1-primary-voll,
-button.welbtn-v3_1_1-primary-voll,
-input[type="button"].welbtn-v3_1_1-primary-voll,
-input[type="submit"].welbtn-v3_1_1-primary-voll,
-input[type="reset"].welbtn-v3_1_1-primary-voll,
-a.welbtn-v3_1_1-primary-voll {
-  background-color: #2abfab;
-  background: #2abfab;
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-voll,
+button.ui.button.welbtn-v3_1_2-primary-voll,
+button.welbtn-v3_1_2-primary-voll,
+input[type="button"].welbtn-v3_1_2-primary-voll,
+input[type="submit"].welbtn-v3_1_2-primary-voll,
+input[type="reset"].welbtn-v3_1_2-primary-voll,
+a.welbtn-v3_1_2-primary-voll {
+  background-color: #090909;
+  background: #090909;
   color: #fff;
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-voll:hover,
-button.ui.button.welbtn-v3_1_1-primary-voll:hover,
-button.welbtn-v3_1_1-primary-voll:hover,
-input[type="button"].welbtn-v3_1_1-primary-voll:hover,
-input[type="submit"].welbtn-v3_1_1-primary-voll:hover,
-input[type="reset"].welbtn-v3_1_1-primary-voll:hover,
-a.welbtn-v3_1_1-primary-voll:hover {
-  background-color: rgba(42, 191, 171, 0.6);
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-voll:hover,
+button.ui.button.welbtn-v3_1_2-primary-voll:hover,
+button.welbtn-v3_1_2-primary-voll:hover,
+input[type="button"].welbtn-v3_1_2-primary-voll:hover,
+input[type="submit"].welbtn-v3_1_2-primary-voll:hover,
+input[type="reset"].welbtn-v3_1_2-primary-voll:hover,
+a.welbtn-v3_1_2-primary-voll:hover {
+  background-color: rgba(9, 9, 9, 0.6);
   color: #fff;
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
-.ui.basic.buttons button.ui.button.welbtn-v3_1_1-primary-voll,
-.ui.buttons button.ui.basic.button.welbtn-v3_1_1-primary-voll,
-button.ui.basic.button.welbtn-v3_1_1-primary-voll {
+.ui.basic.buttons button.ui.button.welbtn-v3_1_2-primary-voll,
+.ui.buttons button.ui.basic.button.welbtn-v3_1_2-primary-voll,
+button.ui.basic.button.welbtn-v3_1_2-primary-voll {
   background: 0 0;
-  -webkit-box-shadow: 0 0 0 1px #2abfab inset;
-  box-shadow: 0 0 0 1px #2abfab inset;
-  color: #2abfab;
+  -webkit-box-shadow: 0 0 0 1px #090909 inset;
+  box-shadow: 0 0 0 1px #090909 inset;
+  color: #090909;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-panetteria,
-button.ui.button.welbtn-v3_1_1-primary-panetteria,
-button.welbtn-v3_1_1-primary-panetteria,
-input[type="button"].welbtn-v3_1_1-primary-panetteria,
-input[type="submit"].welbtn-v3_1_1-primary-panetteria,
-input[type="reset"].welbtn-v3_1_1-primary-panetteria,
-a.welbtn-v3_1_1-primary-panetteria {
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-panetteria,
+button.ui.button.welbtn-v3_1_2-primary-panetteria,
+button.welbtn-v3_1_2-primary-panetteria,
+input[type="button"].welbtn-v3_1_2-primary-panetteria,
+input[type="submit"].welbtn-v3_1_2-primary-panetteria,
+input[type="reset"].welbtn-v3_1_2-primary-panetteria,
+a.welbtn-v3_1_2-primary-panetteria {
   background-color: #ff8c00;
   background: #ff8c00;
   color: #fff;
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-primary-panetteria:hover,
-button.ui.button.welbtn-v3_1_1-primary-panetteria:hover,
-button.welbtn-v3_1_1-primary-panetteria:hover,
-input[type="button"].welbtn-v3_1_1-primary-panetteria:hover,
-input[type="submit"].welbtn-v3_1_1-primary-panetteria:hover,
-input[type="reset"].welbtn-v3_1_1-primary-panetteria:hover,
-a.welbtn-v3_1_1-primary-panetteria:hover {
+.ui.buttons button.ui.button.welbtn-v3_1_2-primary-panetteria:hover,
+button.ui.button.welbtn-v3_1_2-primary-panetteria:hover,
+button.welbtn-v3_1_2-primary-panetteria:hover,
+input[type="button"].welbtn-v3_1_2-primary-panetteria:hover,
+input[type="submit"].welbtn-v3_1_2-primary-panetteria:hover,
+input[type="reset"].welbtn-v3_1_2-primary-panetteria:hover,
+a.welbtn-v3_1_2-primary-panetteria:hover {
   background-color: #ffa500;
   color: #fff;
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
-.ui.basic.buttons button.ui.button.welbtn-v3_1_1-primary-panetteria,
-.ui.buttons button.ui.basic.button.welbtn-v3_1_1-primary-panetteria,
-button.ui.basic.button.welbtn-v3_1_1-primary-panetteria {
+.ui.basic.buttons button.ui.button.welbtn-v3_1_2-primary-panetteria,
+.ui.buttons button.ui.basic.button.welbtn-v3_1_2-primary-panetteria,
+button.ui.basic.button.welbtn-v3_1_2-primary-panetteria {
   background: 0 0;
   -webkit-box-shadow: 0 0 0 1px #ff8c00 inset;
   box-shadow: 0 0 0 1px #ff8c00 inset;
   color: #ff8c00;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-basic,
-button.ui.button.welbtn-v3_1_1-secondary-basic,
-button.welbtn-v3_1_1-secondary-basic,
-input[type="button"].welbtn-v3_1_1-secondary-basic,
-input[type="submit"].welbtn-v3_1_1-secondary-basic,
-input[type="reset"].welbtn-v3_1_1-secondary-basic,
-a.welbtn-v3_1_1-secondary-basic {
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-basic,
+button.ui.button.welbtn-v3_1_2-secondary-basic,
+button.welbtn-v3_1_2-secondary-basic,
+input[type="button"].welbtn-v3_1_2-secondary-basic,
+input[type="submit"].welbtn-v3_1_2-secondary-basic,
+input[type="reset"].welbtn-v3_1_2-secondary-basic,
+a.welbtn-v3_1_2-secondary-basic {
   background-color: #efefef;
   color: #000;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-basic:hover,
-button.ui.button.welbtn-v3_1_1-secondary-basic:hover,
-button.welbtn-v3_1_1-secondary-basic:hover,
-input[type="button"].welbtn-v3_1_1-secondary-basic:hover,
-input[type="submit"].welbtn-v3_1_1-secondary-basic:hover,
-input[type="reset"].welbtn-v3_1_1-secondary-basic:hover,
-a.welbtn-v3_1_1-secondary-basic:hover {
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-basic:hover,
+button.ui.button.welbtn-v3_1_2-secondary-basic:hover,
+button.welbtn-v3_1_2-secondary-basic:hover,
+input[type="button"].welbtn-v3_1_2-secondary-basic:hover,
+input[type="submit"].welbtn-v3_1_2-secondary-basic:hover,
+input[type="reset"].welbtn-v3_1_2-secondary-basic:hover,
+a.welbtn-v3_1_2-secondary-basic:hover {
   background-color: #ddd;
   color: #000;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-nova,
-button.ui.button.welbtn-v3_1_1-secondary-nova,
-button.welbtn-v3_1_1-secondary-nova,
-input[type="button"].welbtn-v3_1_1-secondary-nova,
-input[type="submit"].welbtn-v3_1_1-secondary-nova,
-input[type="reset"].welbtn-v3_1_1-secondary-nova,
-a.welbtn-v3_1_1-secondary-nova {
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-nova,
+button.ui.button.welbtn-v3_1_2-secondary-nova,
+button.welbtn-v3_1_2-secondary-nova,
+input[type="button"].welbtn-v3_1_2-secondary-nova,
+input[type="submit"].welbtn-v3_1_2-secondary-nova,
+input[type="reset"].welbtn-v3_1_2-secondary-nova,
+a.welbtn-v3_1_2-secondary-nova {
   background-color: #c2c3c3;
   color: #fff;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-nova:hover,
-button.ui.button.welbtn-v3_1_1-secondary-nova:hover,
-button.welbtn-v3_1_1-secondary-nova:hover,
-input[type="button"].welbtn-v3_1_1-secondary-nova:hover,
-input[type="submit"].welbtn-v3_1_1-secondary-nova:hover,
-input[type="reset"].welbtn-v3_1_1-secondary-nova:hover,
-a.welbtn-v3_1_1-secondary-nova:hover {
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-nova:hover,
+button.ui.button.welbtn-v3_1_2-secondary-nova:hover,
+button.welbtn-v3_1_2-secondary-nova:hover,
+input[type="button"].welbtn-v3_1_2-secondary-nova:hover,
+input[type="submit"].welbtn-v3_1_2-secondary-nova:hover,
+input[type="reset"].welbtn-v3_1_2-secondary-nova:hover,
+a.welbtn-v3_1_2-secondary-nova:hover {
   background-color: #d6d6d6;
   color: #fff;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-beldad,
-button.ui.button.welbtn-v3_1_1-secondary-beldad,
-button.welbtn-v3_1_1-secondary-beldad,
-input[type="button"].welbtn-v3_1_1-secondary-beldad,
-input[type="submit"].welbtn-v3_1_1-secondary-beldad,
-input[type="reset"].welbtn-v3_1_1-secondary-beldad,
-a.welbtn-v3_1_1-secondary-beldad {
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-beldad,
+button.ui.button.welbtn-v3_1_2-secondary-beldad,
+button.welbtn-v3_1_2-secondary-beldad,
+input[type="button"].welbtn-v3_1_2-secondary-beldad,
+input[type="submit"].welbtn-v3_1_2-secondary-beldad,
+input[type="reset"].welbtn-v3_1_2-secondary-beldad,
+a.welbtn-v3_1_2-secondary-beldad {
   background-color: rgba(221, 221, 221, 0.6);
   color: #333;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-beldad:hover,
-button.ui.button.welbtn-v3_1_1-secondary-beldad:hover,
-button.welbtn-v3_1_1-secondary-beldad:hover,
-input[type="button"].welbtn-v3_1_1-secondary-beldad:hover,
-input[type="submit"].welbtn-v3_1_1-secondary-beldad:hover,
-input[type="reset"].welbtn-v3_1_1-secondary-beldad:hover,
-a.welbtn-v3_1_1-secondary-beldad:hover {
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-beldad:hover,
+button.ui.button.welbtn-v3_1_2-secondary-beldad:hover,
+button.welbtn-v3_1_2-secondary-beldad:hover,
+input[type="button"].welbtn-v3_1_2-secondary-beldad:hover,
+input[type="submit"].welbtn-v3_1_2-secondary-beldad:hover,
+input[type="reset"].welbtn-v3_1_2-secondary-beldad:hover,
+a.welbtn-v3_1_2-secondary-beldad:hover {
   background-color: #ddd;
   color: #333;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-bordeaux,
-button.ui.button.welbtn-v3_1_1-secondary-bordeaux,
-button.welbtn-v3_1_1-secondary-bordeaux,
-input[type="button"].welbtn-v3_1_1-secondary-bordeaux,
-input[type="submit"].welbtn-v3_1_1-secondary-bordeaux,
-input[type="reset"].welbtn-v3_1_1-secondary-bordeaux,
-a.welbtn-v3_1_1-secondary-bordeaux {
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-bordeaux,
+button.ui.button.welbtn-v3_1_2-secondary-bordeaux,
+button.welbtn-v3_1_2-secondary-bordeaux,
+input[type="button"].welbtn-v3_1_2-secondary-bordeaux,
+input[type="submit"].welbtn-v3_1_2-secondary-bordeaux,
+input[type="reset"].welbtn-v3_1_2-secondary-bordeaux,
+a.welbtn-v3_1_2-secondary-bordeaux {
   background-color: #eee;
   color: #000;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-bordeaux:hover,
-button.ui.button.welbtn-v3_1_1-secondary-bordeaux:hover,
-button.welbtn-v3_1_1-secondary-bordeaux:hover,
-input[type="button"].welbtn-v3_1_1-secondary-bordeaux:hover,
-input[type="submit"].welbtn-v3_1_1-secondary-bordeaux:hover,
-input[type="reset"].welbtn-v3_1_1-secondary-bordeaux:hover,
-a.welbtn-v3_1_1-secondary-bordeaux:hover {
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-bordeaux:hover,
+button.ui.button.welbtn-v3_1_2-secondary-bordeaux:hover,
+button.welbtn-v3_1_2-secondary-bordeaux:hover,
+input[type="button"].welbtn-v3_1_2-secondary-bordeaux:hover,
+input[type="submit"].welbtn-v3_1_2-secondary-bordeaux:hover,
+input[type="reset"].welbtn-v3_1_2-secondary-bordeaux:hover,
+a.welbtn-v3_1_2-secondary-bordeaux:hover {
   background-color: #ddd;
   color: #000;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-carina,
-button.ui.button.welbtn-v3_1_1-secondary-carina,
-button.welbtn-v3_1_1-secondary-carina,
-input[type="button"].welbtn-v3_1_1-secondary-carina,
-input[type="submit"].welbtn-v3_1_1-secondary-carina,
-input[type="reset"].welbtn-v3_1_1-secondary-carina,
-a.welbtn-v3_1_1-secondary-carina {
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-carina,
+button.ui.button.welbtn-v3_1_2-secondary-carina,
+button.welbtn-v3_1_2-secondary-carina,
+input[type="button"].welbtn-v3_1_2-secondary-carina,
+input[type="submit"].welbtn-v3_1_2-secondary-carina,
+input[type="reset"].welbtn-v3_1_2-secondary-carina,
+a.welbtn-v3_1_2-secondary-carina {
   background-color: #eee;
   color: #000;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-carina:hover,
-button.ui.button.welbtn-v3_1_1-secondary-carina:hover,
-button.welbtn-v3_1_1-secondary-carina:hover,
-input[type="button"].welbtn-v3_1_1-secondary-carina:hover,
-input[type="submit"].welbtn-v3_1_1-secondary-carina:hover,
-input[type="reset"].welbtn-v3_1_1-secondary-carina:hover,
-a.welbtn-v3_1_1-secondary-carina:hover {
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-carina:hover,
+button.ui.button.welbtn-v3_1_2-secondary-carina:hover,
+button.welbtn-v3_1_2-secondary-carina:hover,
+input[type="button"].welbtn-v3_1_2-secondary-carina:hover,
+input[type="submit"].welbtn-v3_1_2-secondary-carina:hover,
+input[type="reset"].welbtn-v3_1_2-secondary-carina:hover,
+a.welbtn-v3_1_2-secondary-carina:hover {
   background-color: #ddd;
   color: #000;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-square,
-button.ui.button.welbtn-v3_1_1-secondary-square,
-button.welbtn-v3_1_1-secondary-square,
-input[type="button"].welbtn-v3_1_1-secondary-square,
-input[type="submit"].welbtn-v3_1_1-secondary-square,
-input[type="reset"].welbtn-v3_1_1-secondary-square,
-a.welbtn-v3_1_1-secondary-square {
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-square,
+button.ui.button.welbtn-v3_1_2-secondary-square,
+button.welbtn-v3_1_2-secondary-square,
+input[type="button"].welbtn-v3_1_2-secondary-square,
+input[type="submit"].welbtn-v3_1_2-secondary-square,
+input[type="reset"].welbtn-v3_1_2-secondary-square,
+a.welbtn-v3_1_2-secondary-square {
   background-color: #efefef;
   color: #333;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-square:hover,
-button.ui.button.welbtn-v3_1_1-secondary-square:hover,
-button.welbtn-v3_1_1-secondary-square:hover,
-input[type="button"].welbtn-v3_1_1-secondary-square:hover,
-input[type="submit"].welbtn-v3_1_1-secondary-square:hover,
-input[type="reset"].welbtn-v3_1_1-secondary-square:hover,
-a.welbtn-v3_1_1-secondary-square:hover {
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-square:hover,
+button.ui.button.welbtn-v3_1_2-secondary-square:hover,
+button.welbtn-v3_1_2-secondary-square:hover,
+input[type="button"].welbtn-v3_1_2-secondary-square:hover,
+input[type="submit"].welbtn-v3_1_2-secondary-square:hover,
+input[type="reset"].welbtn-v3_1_2-secondary-square:hover,
+a.welbtn-v3_1_2-secondary-square:hover {
   background-color: rgba(239, 239, 239, 0.6);
   color: #333;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-voll,
-button.ui.button.welbtn-v3_1_1-secondary-voll,
-button.welbtn-v3_1_1-secondary-voll,
-input[type="button"].welbtn-v3_1_1-secondary-voll,
-input[type="submit"].welbtn-v3_1_1-secondary-voll,
-input[type="reset"].welbtn-v3_1_1-secondary-voll,
-a.welbtn-v3_1_1-secondary-voll {
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-voll,
+button.ui.button.welbtn-v3_1_2-secondary-voll,
+button.welbtn-v3_1_2-secondary-voll,
+input[type="button"].welbtn-v3_1_2-secondary-voll,
+input[type="submit"].welbtn-v3_1_2-secondary-voll,
+input[type="reset"].welbtn-v3_1_2-secondary-voll,
+a.welbtn-v3_1_2-secondary-voll {
   background-color: #ddd;
   color: #333;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-voll:hover,
-button.ui.button.welbtn-v3_1_1-secondary-voll:hover,
-button.welbtn-v3_1_1-secondary-voll:hover,
-input[type="button"].welbtn-v3_1_1-secondary-voll:hover,
-input[type="submit"].welbtn-v3_1_1-secondary-voll:hover,
-input[type="reset"].welbtn-v3_1_1-secondary-voll:hover,
-a.welbtn-v3_1_1-secondary-voll:hover {
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-voll:hover,
+button.ui.button.welbtn-v3_1_2-secondary-voll:hover,
+button.welbtn-v3_1_2-secondary-voll:hover,
+input[type="button"].welbtn-v3_1_2-secondary-voll:hover,
+input[type="submit"].welbtn-v3_1_2-secondary-voll:hover,
+input[type="reset"].welbtn-v3_1_2-secondary-voll:hover,
+a.welbtn-v3_1_2-secondary-voll:hover {
   background-color: rgba(221, 221, 221, 0.6);
   color: #333;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-panetteria,
-button.ui.button.welbtn-v3_1_1-secondary-panetteria,
-button.welbtn-v3_1_1-secondary-panetteria,
-input[type="button"].welbtn-v3_1_1-secondary-panetteria,
-input[type="submit"].welbtn-v3_1_1-secondary-panetteria,
-input[type="reset"].welbtn-v3_1_1-secondary-panetteria,
-a.welbtn-v3_1_1-secondary-panetteria {
-  background-color: #fff;
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-panetteria,
+button.ui.button.welbtn-v3_1_2-secondary-panetteria,
+button.welbtn-v3_1_2-secondary-panetteria,
+input[type="button"].welbtn-v3_1_2-secondary-panetteria,
+input[type="submit"].welbtn-v3_1_2-secondary-panetteria,
+input[type="reset"].welbtn-v3_1_2-secondary-panetteria,
+a.welbtn-v3_1_2-secondary-panetteria {
+  background-color: #e19e2f;
   color: #fff;
 }
-.ui.buttons button.ui.button.welbtn-v3_1_1-secondary-panetteria:hover,
-button.ui.button.welbtn-v3_1_1-secondary-panetteria:hover,
-button.welbtn-v3_1_1-secondary-panetteria:hover,
-input[type="button"].welbtn-v3_1_1-secondary-panetteria:hover,
-input[type="submit"].welbtn-v3_1_1-secondary-panetteria:hover,
-input[type="reset"].welbtn-v3_1_1-secondary-panetteria:hover,
-a.welbtn-v3_1_1-secondary-panetteria:hover {
-  background-color: black;
+.ui.buttons button.ui.button.welbtn-v3_1_2-secondary-panetteria:hover,
+button.ui.button.welbtn-v3_1_2-secondary-panetteria:hover,
+button.welbtn-v3_1_2-secondary-panetteria:hover,
+input[type="button"].welbtn-v3_1_2-secondary-panetteria:hover,
+input[type="submit"].welbtn-v3_1_2-secondary-panetteria:hover,
+input[type="reset"].welbtn-v3_1_2-secondary-panetteria:hover,
+a.welbtn-v3_1_2-secondary-panetteria:hover {
+  background-color: #eccb93;
   color: #fff;
 }
