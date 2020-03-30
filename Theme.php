@@ -6,7 +6,7 @@ namespace Aivec\Welcart\Generic;
  */
 class Theme {
 
-    const VERSION = 'v3_2_0';
+    const VERSION = 'v3_2_1';
 
     /**
      * Returns config based on the currently enabled Welcart theme
