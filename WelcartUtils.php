@@ -1,6 +1,8 @@
 <?php
 namespace Aivec\Welcart\Generic;
 
+use Exception;
+
 /**
  * Welcart Generic Utility functions.
  */
@@ -33,15 +35,13 @@ final class WelcartUtils {
     }
 
     /**
-     * Returns true if on cart page
-     *
-     * NOTE: sometimes the $usces->page is not set to 'cart' even when on the cart page
+     * Returns true if current page is `/usces-cart` regardless of `$usces->page`'s value
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
      * @global \usc_e_shop usces
-     * @return boolean
+     * @return bool
      */
-    public static function isCartPage() {
+    public static function isCartSlug() {
         global $usces;
 
         $flag = false;
@@ -58,23 +58,45 @@ final class WelcartUtils {
             $url = esc_url_raw(wp_unslash($_SERVER['REQUEST_URI']));
         }
         if ($usces->is_cart_page($url)) {
-            if ($usces->page !== 'customer'
-                && $usces->page !== 'delivery'
-                && $usces->page !== 'ordercompletion'
-                && $usces->page !== 'error'
-                && $usces->page !== 'confirm'
-                && $usces->page !== 'amazon_quickpay'
-                && empty($_POST['aap']['toquickpay'])
-                || (
-                    $usces->page === 'cart'
-                    && empty($_POST['aap']['toquickpay'])
-                )
-            ) {
-                $flag = true;
-            }
+            $flag = true;
         }
 
         return $flag;
+    }
+
+    /**
+     * Returns true if on cart page
+     *
+     * NOTE: sometimes the `$usces->page` is not set to 'cart' even when on the cart page
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @global \usc_e_shop usces
+     * @return boolean
+     */
+    public static function isCartPage() {
+        global $usces;
+
+        $cartslug = self::isCartSlug();
+        if ($cartslug === false) {
+            return false;
+        }
+
+        if ($usces->page !== 'customer'
+            && $usces->page !== 'delivery'
+            && $usces->page !== 'ordercompletion'
+            && $usces->page !== 'error'
+            && $usces->page !== 'confirm'
+            && $usces->page !== 'amazon_quickpay'
+            && empty($_POST['aap']['toquickpay'])
+            || (
+                $usces->page === 'cart'
+                && empty($_POST['aap']['toquickpay'])
+            )
+        ) {
+            return true;
+        }
+
+        return false;
     }
 
     /**
@@ -87,26 +109,16 @@ final class WelcartUtils {
     public static function isCustomerPage() {
         global $usces;
 
-        $flag = false;
-        if (!isset($usces)) {
-            return $flag;
+        $cartslug = self::isCartSlug();
+        if ($cartslug === false) {
+            return false;
         }
 
-        if (!($usces instanceof \usc_e_shop)) {
-            return $flag;
+        if ($usces->page === 'customer') {
+            return true;
         }
 
-        $url = '';
-        if (isset($_SERVER['REQUEST_URI'])) {
-            $url = esc_url_raw(wp_unslash($_SERVER['REQUEST_URI']));
-        }
-        if ($usces->is_cart_page($url)) {
-            if ($usces->page === 'customer') {
-                $flag = true;
-            }
-        }
-
-        return $flag;
+        return false;
     }
 
     /**
@@ -119,26 +131,38 @@ final class WelcartUtils {
     public static function isDeliveryPage() {
         global $usces;
 
-        $flag = false;
-        if (!isset($usces)) {
-            return $flag;
+        $cartslug = self::isCartSlug();
+        if ($cartslug === false) {
+            return false;
         }
 
-        if (!($usces instanceof \usc_e_shop)) {
-            return $flag;
+        if ($usces->page === 'delivery') {
+            return true;
         }
 
-        $url = '';
-        if (isset($_SERVER['REQUEST_URI'])) {
-            $url = esc_url_raw(wp_unslash($_SERVER['REQUEST_URI']));
-        }
-        if ($usces->is_cart_page($url)) {
-            if ($usces->page === 'delivery') {
-                $flag = true;
-            }
+        return false;
+    }
+
+    /**
+     * Returns true if on cart error page
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @global \usc_e_shop usces
+     * @return boolean
+     */
+    public static function isCartErrorPage() {
+        global $usces;
+
+        $cartslug = self::isCartSlug();
+        if ($cartslug === false) {
+            return false;
         }
 
-        return $flag;
+        if ($usces->page === 'error') {
+            return true;
+        }
+
+        return false;
     }
 
     /**
