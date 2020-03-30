@@ -6,7 +6,7 @@ namespace Aivec\Welcart\Generic;
  */
 class Theme {
 
-    const VERSION = 'v3_1_2';
+    const VERSION = 'v3_2_0';
 
     /**
      * Returns config based on the currently enabled Welcart theme
@@ -26,55 +26,108 @@ class Theme {
         switch ($theme->stylesheet) {
             case 'welcart_basic':
                 $theme_config['name'] = 'basic';
+                $theme_config['classname'] = 'WelcartBasic';
                 $theme_config['color'] = apply_filters($hookprefix . '_tutils_color', 'orange');
                 break;
             case 'welcart_basic-nova':
                 $theme_config['name'] = 'nova';
+                $theme_config['classname'] = 'WelcartNova';
                 $theme_config['color'] = apply_filters($hookprefix . '_tutils_color', 'red');
                 break;
             case 'welcart_basic-beldad':
                 $theme_config['name'] = 'beldad';
+                $theme_config['classname'] = 'WelcartBeldad';
                 $theme_config['color'] = apply_filters($hookprefix . '_tutils_color', 'black');
                 break;
             case 'welcart_basic-bordeaux':
                 $theme_config['name'] = 'bordeaux';
+                $theme_config['classname'] = 'WelcartBordeaux';
                 $theme_config['color'] = apply_filters($hookprefix . '_tutils_color', 'red');
                 break;
             case 'welcart_basic-carina':
                 $theme_config['name'] = 'carina';
+                $theme_config['classname'] = 'WelcartCarina';
                 $theme_config['color'] = apply_filters($hookprefix . '_tutils_color', 'red');
                 break;
             case 'welcart_basic-square':
                 $theme_config['name'] = 'square';
+                $theme_config['classname'] = 'WelcartSquare';
                 $theme_config['color'] = apply_filters($hookprefix . '_tutils_color', 'black');
                 break;
             case 'welcart_basic-voll':
                 $theme_config['name'] = 'voll';
+                $theme_config['classname'] = 'WelcartVoll';
                 $theme_config['color'] = apply_filters($hookprefix . '_tutils_color', 'teal');
                 break;
             case 'welcart_panetteria':
                 $theme_config['name'] = 'panetteria';
+                $theme_config['classname'] = 'WelcartPanetteria';
                 $theme_config['color'] = apply_filters($hookprefix . '_tutils_color', 'brown');
                 break;
             case 'welcart_default':
                 $theme_config['name'] = 'default';
+                $theme_config['classname'] = 'WelcartDefault';
                 $theme_config['color'] = apply_filters($hookprefix . '_tutils_color', '');
                 break;
             default:
                 $theme_config['name'] = apply_filters($hookprefix . '_tutils_default_name', '');
+                $theme_config['classname'] = 'Base';
                 $theme_config['color'] = apply_filters($hookprefix . '_tutils_color', '');
                 break;
-        }
-
-        if (strtolower($theme->get('Name')) === 'welcart default theme') {
-            $theme_config['name'] = 'default';
-            $theme_config['color'] = apply_filters($hookprefix . '_tutils_color', 'orange');
         }
 
         $theme_config['btnprimary'] = 'welbtn-' . self::VERSION . '-primary-' . $theme_config['name'];
         $theme_config['btnsecondary'] = 'welbtn-' . self::VERSION . '-secondary-' . $theme_config['name'];
 
         return $theme_config;
+    }
+
+    /**
+     * Instantiates a view class based on the current theme
+     *
+     * Given the fully qualified namespace of `MyPlugin\Views\MyPage`, the following file structure
+     * is expected:
+     *
+     * MyPlugin\
+     *    Views\
+     *       MyPage\
+     *          Base.php - At the very least, this file **MUST** exist or `null` will be returned.
+     *                     The remaining theme files are *optional*.
+     *          WelcartBasic.php
+     *          WelcartNova.php
+     *          WelcartBeldad.php
+     *          WelcartBordeaux.php
+     *          WelcartCarina.php
+     *          WelcartSquare.php
+     *          WelcartVoll.php
+     *          WelcartPanetteria.php
+     *          WelcartDefault.php
+     *
+     * The `Base` class should provide filter methods that can be overriden in child classes. Theme
+     * classes (`WelcartBasic`, `WelcartNova`, etc.) should *extend* the `Base` class and override
+     * `Base` class methods where needed.
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @param string $fullyQualifiedNamespace does not include trailing slash. In case the class
+     *                                        is in the global namespace, an empty string is expected
+     * @param array  $constructorParams array of one or more parameters pass to constructor
+     * @return null|mixed instantiated view class if exists
+     */
+    public static function initThemeViewClass(
+        $fullyQualifiedNamespace,
+        $constructorParams = []
+    ) {
+        $classname = self::themeConfig('dummy')['classname'];
+        $class = "{$fullyQualifiedNamespace}\\{$classname}";
+        $view = null;
+        if (class_exists($class)) {
+            $view = new $class(...$constructorParams);
+        } else {
+            $class = "{$fullyQualifiedNamespace}\Base";
+            $view = new $class(...$constructorParams);
+        }
+
+        return $view;
     }
 
     /**
