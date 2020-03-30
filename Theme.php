@@ -56,6 +56,10 @@ class Theme {
                 $theme_config['name'] = 'panetteria';
                 $theme_config['color'] = apply_filters($hookprefix . '_tutils_color', 'brown');
                 break;
+            case 'welcart_default':
+                $theme_config['name'] = 'default';
+                $theme_config['color'] = apply_filters($hookprefix . '_tutils_color', '');
+                break;
             default:
                 $theme_config['name'] = apply_filters($hookprefix . '_tutils_default_name', '');
                 $theme_config['color'] = apply_filters($hookprefix . '_tutils_color', '');
