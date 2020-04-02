@@ -131,6 +131,16 @@ class Theme {
     }
 
     /**
+     * Returns array of all Welcart theme slugs
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @return string[]
+     */
+    public static function getAllThemeSlugs() {
+        return ['basic', 'beldad', 'bordeaux', 'nova', 'carina', 'voll', 'panetteria', 'default'];
+    }
+    
+    /**
      * Enqueues themes.css
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
