@@ -198,6 +198,91 @@ final class WelcartUtils {
     }
 
     /**
+     * Returns true if on order completion page
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @global \usc_e_shop usces
+     * @return boolean
+     */
+    public static function isOrderCompletionPage() {
+        global $usces;
+
+        $flag = false;
+        if (!isset($usces)) {
+            return $flag;
+        }
+
+        if (!($usces instanceof \usc_e_shop)) {
+            return $flag;
+        }
+
+        $url = '';
+        if (isset($_SERVER['REQUEST_URI'])) {
+            $url = esc_url_raw(wp_unslash($_SERVER['REQUEST_URI']));
+        }
+        if ($usces->is_cart_page($url)) {
+            if ($usces->page === 'ordercompletion') {
+                $flag = true;
+            }
+        }
+
+        return $flag;
+    }
+
+    /**
+     * Returns true if on the order list page
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @return boolean
+     */
+    public static function isOrderListPage() {
+        if (is_admin()) {
+            $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';
+            $action = isset($_REQUEST['order_action']) ? $_REQUEST['order_action'] : '';
+            if (trim($page) === 'usces_orderlist' && empty($action)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Returns true if on the order edit page
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @return boolean
+     */
+    public static function isOrderEditPage() {
+        if (is_admin()) {
+            $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';
+            $action = isset($_REQUEST['order_action']) ? $_REQUEST['order_action'] : '';
+            if (trim($page) === 'usces_orderlist' && $action === 'edit') {
+                return true;
+            }
+        }
+
+        return false;
+    }
+    
+    /**
+     * Returns true if on the item page
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @global \WP_Post $post
+     * @return boolean
+     */
+    public static function isItemPage() {
+        global $post;
+
+        if (is_single() && 'item' === strtolower(trim($post->post_mime_type))) {
+            return true;
+        }
+
+        return false;
+    }
+    
+    /**
      * Returns true if on member registration page
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
