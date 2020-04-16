@@ -340,7 +340,6 @@ final class WelcartUtils {
      */
     public static function getUscesEndpoints() {
         return [
-            'usces_endpoint' => USCES_CART_URL,
             'uscesCartEndpoint' => USCES_CART_URL,
             'uscesMemberEndpoint' => USCES_MEMBER_URL,
             'uscesNewMemberEndpoint' => USCES_NEWMEMBER_URL,
@@ -367,5 +366,56 @@ final class WelcartUtils {
         $vars = array_merge($vars, self::getUscesEndpoints());
 
         return $vars;
+    }
+
+    /**
+     * Extracts Welcart SESSION data from DB and re-populates `$_SESSION`.
+     *
+     * This method is useful when dealing with redirects from payment portals, such as with
+     * LINE Pay, Amazon Pay, etc.
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @param mixed $sessionId unique ID representing the option key
+     * @return void
+     */
+    public static function recreateSessionData($sessionId) {
+        $order_data = get_option($sessionId);
+        $_SESSION['usces_entry'] = $order_data['usces_entry'];
+        $_SESSION['usces_member'] = $order_data['usces_member'];
+        $_SESSION['usces_cart'] = [];
+
+        // reserialize cart for usces' cart class
+        foreach ($order_data['usces_cart'] as $obj) {
+            $_SESSION['usces_cart'][$obj['serial']] = [
+                'quant' => $obj['quantity'],
+                'price' => $obj['price'],
+            ];
+        }
+    }
+
+    /**
+     * Saves Welcart SESSION data as option in DB.
+     *
+     * This method is useful when dealing with redirects from payment portals, such as with
+     * LINE Pay, Amazon Pay, etc.
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @param mixed $sessionId unique ID to use as the option key
+     * @param array $extras
+     * @return void
+     */
+    public static function saveSessionData($sessionId, $extras = []) {
+        global $usces;
+
+        $data = array_merge(
+            [
+                'usces_cart' => $usces->cart->get_cart(),
+                'usces_entry' => isset($_SESSION['usces_entry']) ? $_SESSION['usces_entry'] : [],
+                'usces_member' => isset($_SESSION['usces_member']) ? $_SESSION['usces_member'] : [],
+            ],
+            $extras
+        );
+
+        update_option($sessionId, $data);
     }
 }
