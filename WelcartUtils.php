@@ -257,7 +257,7 @@ final class WelcartUtils {
         if (is_admin()) {
             $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';
             $action = isset($_REQUEST['order_action']) ? $_REQUEST['order_action'] : '';
-            if (trim($page) === 'usces_orderlist' && $action === 'edit') {
+            if (trim($page) === 'usces_orderlist' && ($action === 'edit' || $action === 'editpost')) {
                 return true;
             }
         }
