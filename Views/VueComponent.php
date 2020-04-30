@@ -4,22 +4,35 @@ namespace Aivec\Welcart\Generic\Views;
 /**
  * Interface for components.
  */
-interface VueComponent {
+abstract class VueComponent {
+
+    /**
+     * `true` if controlled component, `false` otherwise
+     *
+     * @var bool
+     */
+    public $controlledComponent;
+
+    /**
+     * Instantiates the Vue component class
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @param bool $controlledComponent Default: `true`
+     * @return void
+     */
+    public function __construct($controlledComponent = true) {
+        $this->controlledComponent = $controlledComponent;
+    }
+
     /**
      * Displays the html for this component.
      *
      * Serves as the entry point for our Vue component.
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
-     * @param array $config {
-     *     Optional. Array or configuration options.
-     *
-     * @type bool $controlledComponent True if this component depends on a container for props, false if this component
-     *                                 is being used in isolation by itself. Default `true`.
-     * }
      * @return void echos html
      */
-    public function template(array $config);
+    abstract public function template();
 
     /**
      * Returns component name as is recognized by Vue. For example, if your component
@@ -28,7 +41,7 @@ interface VueComponent {
      * @author Evan D Shaw <evandanielshaw@gmail.com>
      * @return string
      */
-    public function getComponentName();
+    abstract public function getComponentName();
 
     /**
      * Initializes component. Should be left empty if no initialization logic is required.
@@ -36,5 +49,5 @@ interface VueComponent {
      * @author Evan D Shaw <evandanielshaw@gmail.com>
      * @return void
      */
-    public function init();
+    abstract public function init();
 }
