@@ -26,8 +26,12 @@ class WelcartActivationVerification {
             $this->activated = true;
         }
 
-        load_textdomain('wgeneric', __DIR__ . '/languages/wgeneric-ja.mo');
-        load_textdomain('wgeneric', __DIR__ . '/languages/wgeneric-en.mo');
+        $mopath = __DIR__ . '/languages/wgeneric-' . get_locale() . '.mo';
+        if (file_exists($mopath)) {
+            load_textdomain('wgeneric', $mopath);
+        } else {
+            load_textdomain('wgeneric', __DIR__ . '/languages/wgeneric-en.mo');
+        }
     }
    
     /**
