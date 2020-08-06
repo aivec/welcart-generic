@@ -1,4 +1,4 @@
-@VERSION: v3_3_0;
+@VERSION: v4_0_4;
 @btnnamespace: welbtn;
 
 @basic: basic;
@@ -59,15 +59,16 @@
 @voll-btn-primary-hover: rgba(9, 9, 9, 0.6);
 @voll-btn-secondary-hover: rgba(221, 221, 221, 0.6);
 
-@panetteria-btn-primary: #ff8c00;
+@panetteria-btn-primary:#9e5e37;
 @panetteria-btn-secondary: #e19e2f;
+@panetteria-btn-secondary-alt: #aaa;
 @panetteria-btn-primary-text: #fff;
 @panetteria-btn-secondary-text: #fff;
-@panetteria-btn-primary-hover: #ffa500;
-@panetteria-btn-secondary-hover: #eccb93;
+@panetteria-btn-secondary-alt-text: #fff;
 
 @btn-primary: ~"@{btnnamespace}-@{VERSION}-primary";
 @btn-secondary: ~"@{btnnamespace}-@{VERSION}-secondary";
+@btn-secondary-alt: ~"@{btnnamespace}-@{VERSION}-secondary-alt";
 
 // primary buttons
 .ui.buttons button.ui.button.@{btn-primary}-@{basic},
@@ -280,7 +281,8 @@ a.@{btn-primary}-@{panetteria} {
   -webkit-box-shadow: unset;
   box-shadow: unset;
   &:hover {
-    background-color: @panetteria-btn-primary-hover;
+    opacity: 0.5;
+    background-color: @panetteria-btn-primary;
     color: @panetteria-btn-primary-text;
     -webkit-box-shadow: unset;
     box-shadow: unset;
@@ -408,10 +410,31 @@ input[type="button"].@{btn-secondary}-@{panetteria},
 input[type="submit"].@{btn-secondary}-@{panetteria},
 input[type="reset"].@{btn-secondary}-@{panetteria},
 a.@{btn-secondary}-@{panetteria} {
+  background: @panetteria-btn-secondary;
   background-color: @panetteria-btn-secondary;
   color: @panetteria-btn-secondary-text;
   &:hover {
-    background-color: @panetteria-btn-secondary-hover;
+    opacity: 0.5;
+    background: @panetteria-btn-secondary;
+    background-color: @panetteria-btn-secondary;
     color: @panetteria-btn-secondary-text;
+  }
+}
+
+.ui.buttons button.ui.button.@{btn-secondary-alt}-@{panetteria},
+button.ui.button.@{btn-secondary-alt}-@{panetteria},
+button.@{btn-secondary-alt}-@{panetteria},
+input[type="button"].@{btn-secondary-alt}-@{panetteria},
+input[type="submit"].@{btn-secondary-alt}-@{panetteria},
+input[type="reset"].@{btn-secondary-alt}-@{panetteria},
+a.@{btn-secondary-alt}-@{panetteria} {
+  background: @panetteria-btn-secondary-alt;
+  background-color: @panetteria-btn-secondary-alt;
+  color: @panetteria-btn-secondary-alt-text;
+  &:hover {
+    opacity: 0.5;
+    background: @panetteria-btn-secondary-alt;
+    background-color: @panetteria-btn-secondary-alt;
+    color: @panetteria-btn-secondary-alt-text;
   }
 }

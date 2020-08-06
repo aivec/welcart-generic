@@ -6,7 +6,7 @@ namespace Aivec\Welcart\Generic;
  */
 class Theme {
 
-    const VERSION = 'v3_3_0';
+    const VERSION = 'v4_0_4';
 
     /**
      * Returns config based on the currently enabled Welcart theme
@@ -78,6 +78,7 @@ class Theme {
 
         $theme_config['btnprimary'] = 'welbtn-' . self::VERSION . '-primary-' . $theme_config['name'];
         $theme_config['btnsecondary'] = 'welbtn-' . self::VERSION . '-secondary-' . $theme_config['name'];
+        $theme_config['btnsecondary_alt'] = 'welbtn-' . self::VERSION . '-secondary-alt-' . $theme_config['name'];
 
         return $theme_config;
     }
