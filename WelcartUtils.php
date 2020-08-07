@@ -291,7 +291,7 @@ final class WelcartUtils {
     public static function isAdminItemPage() {
         if (is_admin()) {
             $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';
-            if (trim($page) === 'usces_itemedit' && trim($page) === 'usces_itemnew') {
+            if (trim($page) === 'usces_itemedit' || trim($page) === 'usces_itemnew') {
                 return true;
             }
         }
