@@ -281,6 +281,23 @@ final class WelcartUtils {
 
         return false;
     }
+
+    /**
+     * Returns true if on the admin item edit or registration page
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @return boolean
+     */
+    public static function isAdminItemPage() {
+        if (is_admin()) {
+            $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';
+            if (trim($page) === 'usces_itemedit' && trim($page) === 'usces_itemnew') {
+                return true;
+            }
+        }
+
+        return false;
+    }
     
     /**
      * Returns true if on member registration page

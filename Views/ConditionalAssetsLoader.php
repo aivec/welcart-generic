@@ -99,6 +99,21 @@ class ConditionalAssetsLoader {
     }
 
     /**
+     * Enqueues assets if the current page is the admin item edit or registration page
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @param callable $enqueue should be a closure that calls `wp_enqueue_(style|script)`
+     * @return void
+     */
+    public function loadAdminItemPageAssets(callable $enqueue) {
+        add_action('admin_enqueue_scripts', function () use ($enqueue) {
+            if (WelcartUtils::isAdminItemPage()) {
+                $enqueue();
+            }
+        });
+    }
+
+    /**
      * Enqueues assets if the current page is the order list page
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
