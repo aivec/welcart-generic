@@ -6,10 +6,34 @@ namespace Aivec\Welcart\Generic;
  */
 class Theme {
 
+    /**
+     * Version number used for referencing `theme.css` classes (eg. `welbtn-v4_0_4-primary-basic`).
+     *
+     * This is necessary for class name references because of cases in which different versions of this
+     * library are being used by multiple plugins.
+     */
     const VERSION = 'v4_0_4';
 
     /**
-     * Returns config based on the currently enabled Welcart theme
+     * A list of all official Welcart theme stylesheets
+     */
+    const STYLESHEETS = [
+        'welcart_basic',
+        'welcart_basic-nova',
+        'welcart_basic-beldad',
+        'welcart_basic-bordeaux',
+        'welcart_basic-carina',
+        'welcart_basic-square',
+        'welcart_basic-voll',
+        'welcart_panetteria',
+        'welcart_default',
+    ];
+
+    /**
+     * Returns config based on the currently enabled Welcart theme.
+     *
+     * In cases where the current theme is not an official Welcart theme but is **the child** of an
+     * official Welcart theme, the parent Welcart theme config will be returned.
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
      * @param string $hookprefix used for registering unique global hooks relative to
@@ -23,7 +47,12 @@ class Theme {
         $theme_config['btnclass'] = '';
         $theme_config['full_name'] = $theme->get('Name');
         $theme_config['stylesheet'] = $theme->stylesheet;
-        switch ($theme->stylesheet) {
+        
+        $template = $theme->stylesheet;
+        if (!in_array($template, self::STYLESHEETS, true)) {
+            $template = $theme->template;
+        }
+        switch ($template) {
             case 'welcart_basic':
                 $theme_config['name'] = 'basic';
                 $theme_config['classname'] = 'WelcartBasic';
