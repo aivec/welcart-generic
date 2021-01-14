@@ -1,11 +1,12 @@
 <?php
+
 namespace Aivec\Welcart\Generic\Views;
 
 /**
  * Interface for components.
  */
-abstract class VueComponent {
-
+abstract class VueComponent
+{
     /**
      * `true` if controlled component, `false` otherwise
      *

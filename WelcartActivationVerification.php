@@ -1,12 +1,13 @@
 <?php
+
 namespace Aivec\Welcart\Generic;
 
 /**
  * Verifies whether Welcart is activated or not. Optionally displays error message on
  * admin page if not activated.
  */
-class WelcartActivationVerification {
-   
+class WelcartActivationVerification
+{
     /**
      * True if activated, false otherwise
      *
@@ -33,7 +34,7 @@ class WelcartActivationVerification {
             load_textdomain('wgeneric', __DIR__ . '/languages/wgeneric-en.mo');
         }
     }
-   
+
     /**
      * Registers admin_notices hook if Welcart is deactivated and displays
      * error message at top of admin page

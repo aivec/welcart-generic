@@ -9,7 +9,6 @@
       "email": "evandanielshaw@gmail.com"
     }
   ],
-  "require": {},
   "autoload": {
     "psr-4": {
       "Aivec\\Welcart\\Generic\\": ""
@@ -17,5 +16,16 @@
   },
   "bin": [
     "bin/welthemes"
-  ]
+  ],
+  "require-dev": {
+    "aivec/phpcs-wp": "^2.0",
+    "wp-cli/i18n-command": "^2.2"
+  },
+  "scripts": {
+    "lint": "phpcs -ps --standard=AivecWP-5 .",
+    "lint:fix": "phpcbf -ps --standard=AivecWP-5 .",
+    "i18n:create-pot": "wp i18n make-pot --domain=wgeneric . languages/messages.pot",
+    "i18n:update-pos": "composer i18n:create-pot && find languages -name \"*.po\" | xargs -I % msgmerge -o % % languages/messages.pot",
+    "i18n:make-mo": "wp i18n make-mo languages"
+  }
 }

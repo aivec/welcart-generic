@@ -1,4 +1,5 @@
 <?php
+
 namespace Aivec\Welcart\Generic;
 
 use Exception;
@@ -6,8 +7,8 @@ use Exception;
 /**
  * Welcart Generic Utility functions.
  */
-final class WelcartUtils {
-
+final class WelcartUtils
+{
     /**
      * Prevents instantiation of this class.
      *
@@ -25,11 +26,11 @@ final class WelcartUtils {
      * @return string
      */
     public static function localizeAssociativeArray($array) {
-        foreach ((array) $array as $key => $value) {
+        foreach ((array)$array as $key => $value) {
             if (!is_scalar($value)) {
                 continue;
             }
-            $array[$key] = html_entity_decode((string) $value, ENT_QUOTES, 'UTF-8');
+            $array[$key] = html_entity_decode((string)$value, ENT_QUOTES, 'UTF-8');
         }
         return wp_json_encode($array);
     }
@@ -81,7 +82,8 @@ final class WelcartUtils {
             return false;
         }
 
-        if ($usces->page !== 'customer'
+        if (
+            $usces->page !== 'customer'
             && $usces->page !== 'delivery'
             && $usces->page !== 'ordercompletion'
             && $usces->page !== 'error'
@@ -264,7 +266,7 @@ final class WelcartUtils {
 
         return false;
     }
-    
+
     /**
      * Returns true if on the item page
      *
@@ -298,7 +300,7 @@ final class WelcartUtils {
 
         return false;
     }
-    
+
     /**
      * Returns true if on member registration page
      *
@@ -376,8 +378,8 @@ final class WelcartUtils {
 
         $vars = [
             'usces_cart' => $usces->cart->get_cart(),
-            'usces_entry' => isset($_SESSION['usces_entry']) ? $_SESSION['usces_entry'] : array(),
-            'usces_member' => isset($_SESSION['usces_member']) ? $_SESSION['usces_member'] : array(),
+            'usces_entry' => isset($_SESSION['usces_entry']) ? $_SESSION['usces_entry'] : [],
+            'usces_member' => isset($_SESSION['usces_member']) ? $_SESSION['usces_member'] : [],
             'label' => self::getProductName(),
         ];
         $vars = array_merge($vars, self::getUscesEndpoints());

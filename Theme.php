@@ -1,10 +1,12 @@
 <?php
+
 namespace Aivec\Welcart\Generic;
 
 /**
  * Dynamic theme configurations
  */
-class Theme {
+class Theme
+{
 
     /**
      * Version number used for referencing `theme.css` classes (eg. `welbtn-v4_0_4-primary-basic`).
@@ -47,7 +49,7 @@ class Theme {
         $theme_config['btnclass'] = '';
         $theme_config['full_name'] = $theme->get('Name');
         $theme_config['stylesheet'] = $theme->stylesheet;
-        
+
         $template = $theme->stylesheet;
         if (!in_array($template, self::STYLESHEETS, true)) {
             $template = $theme->template;
@@ -169,7 +171,7 @@ class Theme {
     public static function getAllThemeSlugs() {
         return ['basic', 'beldad', 'bordeaux', 'nova', 'carina', 'voll', 'panetteria', 'default'];
     }
-    
+
     /**
      * Enqueues themes.css
      *

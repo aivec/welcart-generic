@@ -1,4 +1,5 @@
 <?php
+
 namespace Aivec\Welcart\Generic\Views;
 
 use Aivec\Welcart\Generic\WelcartUtils;
@@ -6,8 +7,8 @@ use Aivec\Welcart\Generic\WelcartUtils;
 /**
  * Methods for conditionally loading assets based on the currently active Welcart page
  */
-class ConditionalAssetsLoader {
-
+class ConditionalAssetsLoader
+{
     /**
      * Enqueues assets if the current page is the cart page
      *
