@@ -29,6 +29,8 @@ class Theme
         'welcart_basic-voll',
         'welcart_panetteria',
         'welcart_default',
+        'glamour_tcd073',
+        'iconic_tcd062',
     ];
 
     /**
@@ -55,6 +57,9 @@ class Theme
             $template = $theme->template;
         }
         switch ($template) {
+            //TCD theme quick payment confirmation screen style should be the same as wlcart_basic
+            case 'glamour_tcd073':
+            case 'iconic_tcd062':
             case 'welcart_basic':
                 $theme_config['name'] = 'basic';
                 $theme_config['classname'] = 'WelcartBasic';
