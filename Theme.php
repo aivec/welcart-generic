@@ -57,7 +57,7 @@ class Theme
             $template = $theme->template;
         }
         switch ($template) {
-            // TCD theme quick payment confirmation screen style should be the same as wlcart_basic
+            // TCD theme style should be the same as welcart_basic
             case 'glamour_tcd073':
             case 'iconic_tcd062':
             case 'welcart_basic':
