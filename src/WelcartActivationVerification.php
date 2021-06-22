@@ -11,7 +11,7 @@ class WelcartActivationVerification
     /**
      * True if activated, false otherwise
      *
-     * @var boolean
+     * @var bool
      */
     public $activated;
 

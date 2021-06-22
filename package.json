@@ -1,17 +1,8 @@
 {
-  "name": "welcart-generic",
-  "version": "5.0.0",
-  "description": "Generic interfaces/abstract-classes/utils for Welcart libraries (settlement modules, customizations, etc.)",
+  "name": "@aivec/welcart-generic",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "lessc themes.less themes.css"
+    "build": "lessc src/themes.less src/themes.css"
   },
-  "repository": {
-    "type": "git",
-    "url": "bitbucket.org:aivec/welcart-generic.git"
-  },
-  "author": "Evan D Shaw",
-  "license": "GPL-2.0-only",
   "devDependencies": {
     "less": "^3.12.2"
   }

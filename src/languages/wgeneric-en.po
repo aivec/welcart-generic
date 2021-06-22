@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Aivec LLC.\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-14T22:15:56+09:00\n"
+"POT-Creation-Date: 2021-06-22T12:13:58+09:00\n"
 "PO-Revision-Date: 2018-11-21 22:15+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.11\n"
 
 #. translators: display name for plugin that depends on Welcart
-#: WelcartActivationVerification.php:54
+#: src/WelcartActivationVerification.php:54
 msgid "%s depends on Welcart but it is deactivated. Please activate Welcart."
 msgstr ""
 "%s depends on <strong>Welcart e-Commerce（ウェルカート）</strong> but it is "
