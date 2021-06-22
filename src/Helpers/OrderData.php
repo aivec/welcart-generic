@@ -12,10 +12,9 @@ class OrderData
      *
      * @global \wpdb $wpdb
      * @param int $order_id
-     * @param int $member_id
      * @return array
      */
-    public static function getSubscriptionOrderData($order_id, $member_id) {
+    public static function getSubscriptionOrderData($order_id) {
         global $wpdb;
 
         $continuation_table_name = $wpdb->prefix . 'usces_continuation';
@@ -29,9 +28,8 @@ class OrderData
 			`con_startdate` AS `startdate`, 
 			`con_status` AS `status` 
 			FROM {$continuation_table_name} 
-			WHERE con_order_id = %d AND con_member_id = %d",
-            $order_id,
-            $member_id
+			WHERE con_order_id = %d",
+            $order_id
         );
         $data = $wpdb->get_row($query, ARRAY_A);
         return $data;
