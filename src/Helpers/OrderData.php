@@ -51,4 +51,38 @@ class OrderData
             $wpdb->prepare("SELECT COUNT(*) FROM {$ct} WHERE con_order_id = %d", (int)$order_id)
         );
     }
+
+    /**
+     * Returns the total full price for an order
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @param int $order_id
+     * @return int|null
+     */
+    public static function getTotalFullPrice($order_id) {
+        global $wpdb;
+
+        $order_table = $wpdb->prefix . 'usces_order';
+        $odata = $wpdb->get_row($wpdb->prepare(
+            "SELECT * FROM $order_table WHERE ID = %d",
+            $order_id
+        ));
+        if (empty($odata)) {
+            return null;
+        }
+
+        $total_price
+            = $odata->order_item_total_price
+            - $odata->order_usedpoint
+            + $odata->order_discount
+            + $odata->order_shipping_charge
+            + $odata->order_cod_fee
+            + $odata->order_tax;
+
+        if ($total_price < 0) {
+            $total_price = 0;
+        }
+
+        return $total_price;
+    }
 }
