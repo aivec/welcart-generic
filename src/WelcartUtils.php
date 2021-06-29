@@ -437,4 +437,24 @@ final class WelcartUtils
 
         update_option($sessionId, $data);
     }
+
+    /**
+     * 日付チェック
+     *
+     * @param string $date DateTime
+     * @return bool
+     */
+    public static function isdate($date) {
+        if (empty($date)) {
+            return false;
+        }
+        try {
+            new \DateTime($date);
+            list( $year, $month, $day ) = explode('-', $date);
+            $res = checkdate((int)$month, (int)$day, (int)$year);
+            return $res;
+        } catch (Exception $e) {
+            return false;
+        }
+    }
 }
