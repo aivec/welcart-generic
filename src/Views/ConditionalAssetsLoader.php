@@ -55,6 +55,21 @@ class ConditionalAssetsLoader
     }
 
     /**
+     * Enqueues assets if the current page is the confirm page
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @param callable $enqueue should be a closure that calls `wp_enqueue_(style|script)`
+     * @return void
+     */
+    public function loadConfirmPageAssets(callable $enqueue) {
+        add_action('wp_enqueue_scripts', function () use ($enqueue) {
+            if (WelcartUtils::isConfirmPage()) {
+                $enqueue();
+            }
+        });
+    }
+
+    /**
      * Enqueues assets if the current page is the cart error page
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
