@@ -2,8 +2,6 @@
 
 namespace Aivec\Welcart\Generic;
 
-use Exception;
-
 /**
  * Welcart Generic Utility functions.
  */
@@ -12,10 +10,10 @@ final class WelcartUtils
     /**
      * Prevents instantiation of this class.
      *
-     * @throws Exception // thrown if instantiation is attempted.
+     * @throws \Exception // thrown if instantiation is attempted.
      */
     private function __construct() {
-        throw new Exception("Can't create instance of this class");
+        throw new \Exception("Can't create instance of this class");
     }
 
     /**
@@ -72,7 +70,7 @@ final class WelcartUtils
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
      * @global \usc_e_shop usces
-     * @return boolean
+     * @return bool
      */
     public static function isCartPage() {
         global $usces;
@@ -106,7 +104,7 @@ final class WelcartUtils
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
      * @global \usc_e_shop usces
-     * @return boolean
+     * @return bool
      */
     public static function isCustomerPage() {
         global $usces;
@@ -128,7 +126,7 @@ final class WelcartUtils
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
      * @global \usc_e_shop usces
-     * @return boolean
+     * @return bool
      */
     public static function isDeliveryPage() {
         global $usces;
@@ -150,7 +148,7 @@ final class WelcartUtils
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
      * @global \usc_e_shop usces
-     * @return boolean
+     * @return bool
      */
     public static function isCartErrorPage() {
         global $usces;
@@ -172,7 +170,7 @@ final class WelcartUtils
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
      * @global \usc_e_shop usces
-     * @return boolean
+     * @return bool
      */
     public static function isConfirmPage() {
         global $usces;
@@ -204,7 +202,7 @@ final class WelcartUtils
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
      * @global \usc_e_shop usces
-     * @return boolean
+     * @return bool
      */
     public static function isOrderCompletionPage() {
         global $usces;
@@ -235,7 +233,7 @@ final class WelcartUtils
      * Returns true if on the order list page
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
-     * @return boolean
+     * @return bool
      */
     public static function isOrderListPage() {
         if (is_admin()) {
@@ -253,7 +251,7 @@ final class WelcartUtils
      * Returns true if on the order edit page
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
-     * @return boolean
+     * @return bool
      */
     public static function isOrderEditPage() {
         if (is_admin()) {
@@ -272,7 +270,7 @@ final class WelcartUtils
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
      * @global \WP_Post $post
-     * @return boolean
+     * @return bool
      */
     public static function isItemPage() {
         global $post;
@@ -288,7 +286,7 @@ final class WelcartUtils
      * Returns true if on the admin item edit or registration page
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
-     * @return boolean
+     * @return bool
      */
     public static function isAdminItemPage() {
         if (is_admin()) {
@@ -302,11 +300,32 @@ final class WelcartUtils
     }
 
     /**
+     * Returns true if on member page
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @global \usc_e_shop $usces
+     * @return bool
+     */
+    public static function isMemberPage() {
+        global $usces;
+
+        $url = '';
+        if (isset($_SERVER['REQUEST_URI'])) {
+            $url = esc_url_raw(wp_unslash($_SERVER['REQUEST_URI']));
+        }
+        if ($usces->is_member_page($url)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
      * Returns true if on member registration page
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
-     * @global usc_e_shop $usces
-     * @return boolean
+     * @global \usc_e_shop $usces
+     * @return bool
      */
     public static function isNewMemberPage() {
         global $usces;
@@ -419,6 +438,7 @@ final class WelcartUtils
      * LINE Pay, Amazon Pay, etc.
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @global \usc_e_shop $usces
      * @param mixed $sessionId unique ID to use as the option key
      * @param array $extras
      * @return void
@@ -453,7 +473,7 @@ final class WelcartUtils
             list( $year, $month, $day ) = explode('-', $date);
             $res = checkdate((int)$month, (int)$day, (int)$year);
             return $res;
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return false;
         }
     }

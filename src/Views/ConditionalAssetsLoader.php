@@ -115,6 +115,36 @@ class ConditionalAssetsLoader
     }
 
     /**
+     * Enqueues assets if the current page is the member page
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @param callable $enqueue should be a closure that calls `wp_enqueue_(style|script)`
+     * @return void
+     */
+    public function loadMemberPageAssets(callable $enqueue) {
+        add_action('wp_enqueue_scripts', function () use ($enqueue) {
+            if (WelcartUtils::isMemberPage()) {
+                $enqueue();
+            }
+        });
+    }
+
+    /**
+     * Enqueues assets if the current page is the member registration page
+     *
+     * @author Evan D Shaw <evandanielshaw@gmail.com>
+     * @param callable $enqueue should be a closure that calls `wp_enqueue_(style|script)`
+     * @return void
+     */
+    public function loadMemberRegistrationPageAssets(callable $enqueue) {
+        add_action('wp_enqueue_scripts', function () use ($enqueue) {
+            if (WelcartUtils::isNewMemberPage()) {
+                $enqueue();
+            }
+        });
+    }
+
+    /**
      * Enqueues assets if the current page is the admin item edit or registration page
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>
