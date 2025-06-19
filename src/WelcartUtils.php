@@ -237,10 +237,22 @@ final class WelcartUtils
      */
     public static function isOrderListPage() {
         if (is_admin()) {
-            $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';
+            $pages = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';
+            if (!is_string($pages) && !is_array($pages)) {
+                // invalid type
+                return false;
+            }
+            if (is_string($pages)) {
+                $pages = [$pages];
+            }
             $action = isset($_REQUEST['order_action']) ? $_REQUEST['order_action'] : '';
-            if (trim($page) === 'usces_orderlist' && empty($action)) {
-                return true;
+            if (!is_string($action)) {
+                $action = '';
+            }
+            foreach ($pages as $p) {
+                if (trim($p) === 'usces_orderlist' && empty($action)) {
+                    return true;
+                }
             }
         }
 
@@ -255,10 +267,22 @@ final class WelcartUtils
      */
     public static function isOrderEditPage() {
         if (is_admin()) {
-            $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';
+            $pages = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';
+            if (!is_string($pages) && !is_array($pages)) {
+                // invalid type
+                return false;
+            }
+            if (is_string($pages)) {
+                $pages = [$pages];
+            }
             $action = isset($_REQUEST['order_action']) ? $_REQUEST['order_action'] : '';
-            if (trim($page) === 'usces_orderlist' && ($action === 'edit' || $action === 'editpost')) {
-                return true;
+            if (!is_string($action)) {
+                $action = '';
+            }
+            foreach ($pages as $p) {
+                if (trim($p) === 'usces_orderlist' && ($action === 'edit' || $action === 'editpost')) {
+                    return true;
+                }
             }
         }
 
@@ -290,9 +314,18 @@ final class WelcartUtils
      */
     public static function isAdminItemPage() {
         if (is_admin()) {
-            $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';
-            if (trim($page) === 'usces_itemedit' || trim($page) === 'usces_itemnew') {
-                return true;
+            $pages = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';
+            if (!is_string($pages) && !is_array($pages)) {
+                // invalid type
+                return false;
+            }
+            if (is_string($pages)) {
+                $pages = [$pages];
+            }
+            foreach ($pages as $p) {
+                if (trim($p) === 'usces_itemedit' || trim($p) === 'usces_itemnew') {
+                    return true;
+                }
             }
         }
 
@@ -344,7 +377,7 @@ final class WelcartUtils
     }
 
     /**
-     * Creates product name from cart. Concatenates names and delimits with common
+     * Creates product name from cart. Concatenates names and delimits with comma
      * in case of multiple items.
      *
      * @author Evan D Shaw <evandanielshaw@gmail.com>

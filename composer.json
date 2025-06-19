@@ -16,13 +16,21 @@
   },
   "require-dev": {
     "aivec/phpcs-wp": "^2.0",
-    "wp-cli/i18n-command": "^2.2"
+    "wp-cli/i18n-command": "^2.2",
+    "phpunit/phpunit": "^12",
+    "php-mock/php-mock": "^2.6"
   },
   "scripts": {
-    "lint": "phpcs -ps --standard=AivecWP-5 .",
+    "lint": "phpcs -ps --standard=AivecWP-7 .",
     "lint:fix": "phpcbf -ps --standard=AivecWP-5 .",
     "i18n:create-pot": "wp i18n make-pot --domain=wgeneric . src/languages/messages.pot",
     "i18n:update-pos": "composer i18n:create-pot && find src/languages -name \"*.po\" | xargs -I % msgmerge -o % % src/languages/messages.pot",
-    "i18n:make-mo": "wp i18n make-mo languages"
+    "i18n:make-mo": "wp i18n make-mo languages",
+    "test": "./vendor/bin/phpunit --display-warnings tests"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
   }
 }
